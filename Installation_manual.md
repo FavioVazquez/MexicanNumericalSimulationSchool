@@ -8,7 +8,6 @@ This instruction manual is to help install the required packages, libraries and 
   * Installation for Preschool
  	* Ubuntu
  	* Mac
-  * Preschool Projects
   * School
 
 # Installations for Preschool (sept 29 & 30)
@@ -67,9 +66,6 @@ This instruction manual is to help install the required packages, libraries and 
       - `make all install`
       
 ### Installation instructions - Mac
-
-
-### Projects
 
 
 
