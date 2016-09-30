@@ -13,7 +13,7 @@ The Pre-school folder will eventually contain the
  > Available codes used in sessions
  > Presentations given, by topics/speaker/day
  
- # Projects 
+# Pre-School Projects 
  
  The optional projects are as follows:
  
