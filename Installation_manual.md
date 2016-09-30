@@ -15,8 +15,7 @@ This instruction manual is to help install the required packages, libraries and 
  - gfortran and gcc compiler
  - python yt [library]( http://yt-project.org/):
  - [tipsy](http://www-hpcc.astro.washington.edu/tools/tipsy/tipsy.html)
- - python plplot through NagBody
- - gadget viewer
+ - 14 codes through NagBody
  - MPI
 
 ### Installation instructions - Ubuntu
