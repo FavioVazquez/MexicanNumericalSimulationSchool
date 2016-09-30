@@ -8,10 +8,10 @@
 
 The Pre-school folder will eventually contain the 
 
- > Links to youtube lectures
- > Reading Materials
- > Available codes used in sessions
- > Presentations given, by topics/speaker/day
+ - Links to youtube lectures
+ - Reading Materials
+ - Available codes used in sessions
+ - Presentations given, by topics/speaker/day
  
 # Pre-School Projects 
  
