@@ -27,7 +27,7 @@ This instruction manual is to help install the required packages, libraries and 
       - check installation with `gfortran --version` and `gcc --version`, 
 
    2. Installing yt library:
-      - type `sudo pip install yt`, the output might say something like "successfully installed cython-0.24.1 yt-3.3.1", i 
+      - type `sudo pip install yt`, the output might say something like "successfully installed cython-0.24.1 yt-3.3.1"
 
    3. Installing tipsy:
       - `mkdir /home/tipsy`
@@ -56,7 +56,7 @@ This instruction manual is to help install the required packages, libraries and 
    5. MPI installation - source: https://www.open-mpi.org/
    
       - Download the version for your OS from
-      		https://www.open- mpi.org/software/ompi/v2.0/
+      		https://www.open-mpi.org/software/ompi/v2.0/
       - Move the compressed file into the directory of your preference
       - On the terminal, move to that directory and type 
       		`tar xvf the_compressed_file_name`
