@@ -1,2 +1,3 @@
 # Mexican Numerical Simulation School
-Mexican Numerical Simulations School official repository
+
+![logo](http://iac.edu.mx/mexsimschool/files/2016/08/logo.website.jpg)
