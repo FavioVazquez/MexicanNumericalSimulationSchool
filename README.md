@@ -27,9 +27,11 @@ The bibliography can be found as a whole compressed .zip file at
 # Pre-School Projects  
  The optional projects are as follows:
  
- 1. TBA
- 2. TBA
- 3. TBA
+* Octavio's 2 projects' specs are at
+	* https://github.com/FavioVazquez/MexicanNumericalSimulationSchool/tree/master/preschool/Projects
+	
+* Mario's project's specs are at
+	* 
  
 # School
  
