@@ -49,8 +49,8 @@ Note that you must have Python installed in order to install and run yt
    4. Install plplot library and gadgetviewer through NagBody
    
       -  Follow this [INSTALL](https://github.com/FavioVazquez/MexicanNumericalSimulationSchool/tree/master/preschool/Codes) file
-      - Follow the install file "[Installation_steps_Linux-Ubuntu16](https://github.com/FavioVazquez/MexicanNumericalSimulationSchool/blob/master/preschool/Codes/Installation_steps_Linux-Ubuntu16)"
-      - Download the "zip" folder that contains all the programs that will be installe    
+      - Follow the install file [Installation_steps_Linux-Ubuntu16](https://github.com/FavioVazquez/MexicanNumericalSimulationSchool/blob/master/preschool/Codes/Installation_steps_Linux-Ubuntu16)
+      - Download the [zip](https://github.com/FavioVazquez/MexicanNumericalSimulationSchool/tree/master/preschool/MarioNBodyCodes/zip) folder that contains all the programs that will be installe    
       - Follow the instructions in "Installation_steps...." 
       - Plplot and nbody kit should be installed.
 
@@ -64,7 +64,7 @@ Note that you must have Python installed in order to install and run yt
       - Move to the recently created directory: `cd openmpi-2.0.1`
       - Open the "INSTALL" document (which has detailed instructions on the installation) with the command `vi INSTALL`: "general build of OpenMPI is a combination of 'configure' and 'make' commands"
       - type `./configure`
-      - `make all install`
+      - type `make all install`, this should take a while.
       
 ### Installation instructions - Mac
 
