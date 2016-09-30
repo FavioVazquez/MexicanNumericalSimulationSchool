@@ -21,16 +21,15 @@ Follow the instructions for installation here
 
 The bibliography can be found as a whole compressed .zip file at 
 
-* https://github.com/FavioVazquez/MexicanNumericalSimulationSchool/blob/master/preschool/Bibliography.zip
+* [Bibliography](https://github.com/FavioVazquez/MexicanNumericalSimulationSchool/blob/master/preschool/Bibliography.zip)
 
 
 # Pre-School Projects  
  The optional projects are as follows:
  
-* Octavio's 2 projects' specs are at
-	* https://github.com/FavioVazquez/MexicanNumericalSimulationSchool/tree/master/preschool/Projects
+* Octavio's [2 projects'](https://github.com/FavioVazquez/MexicanNumericalSimulationSchool/tree/master/preschool/Projects)
 	
-* Mario's project's specs are at
+* Mario's [project's specs] are at ()
 	* 
  
 # School

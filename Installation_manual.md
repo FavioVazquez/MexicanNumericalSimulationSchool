@@ -13,8 +13,8 @@ This instruction manual is to help install the required packages, libraries and 
 # Installations for Preschool (sept 29 & 30)
 
  - gfortran and gcc compiler
- - python yt library:         http://yt-project.org/
- - tipsy:                      http://www-hpcc.astro.washington.edu/tools/tipsy/tipsy.html
+ - python yt [library]( http://yt-project.org/):
+ - [tipsy](http://www-hpcc.astro.washington.edu/tools/tipsy/tipsy.html)
  - python plplot through NagBody
  - gadget viewer
  - MPI
@@ -46,14 +46,13 @@ This instruction manual is to help install the required packages, libraries and 
       
    4. Install plplot library and gadgetviewer through NagBody
    
-      -  Follow the INSTALL file at
-      	*https://github.com/FavioVazquez/MexicanNumericalSimulationSchool/tree/master/preschool/Codes
+      -  Follow this [INSTALL](https://github.com/FavioVazquez/MexicanNumericalSimulationSchool/tree/master/preschool/Codes) file
       - Follow the install file "Installation_steps_Linux-Ubuntu16"
       - Download the "zip" folder that contains all the programs that will be installe    
       - Follow the instructions in "Installation_steps...." 
       - Plplot and nbody kit should be installed.
 
-   5. MPI installation - source: https://www.open-mpi.org/
+   5. MPI installation - [source](https://www.open-mpi.org/)
    
       - Download the version for your OS from
       		https://www.open-mpi.org/software/ompi/v2.0/
