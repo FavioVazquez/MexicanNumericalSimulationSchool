@@ -1,0 +1,102 @@
+<HTML>
+<BODY>
+<PRE>
+<!-- Manpage converted by man2html 3.0.1 -->
+<B><A HREF="READASCII.html">READASCII(1)</A></B>                    TIPSY COMMANDS                   <B><A HREF="READASCII.html">READASCII(1)</A></B>
+
+
+
+
+</PRE>
+<H2>NAME</H2><PRE>
+       readascii - read an ascii file
+
+
+</PRE>
+<H2>SYNOPSIS</H2><PRE>
+       <B>readascii</B> <I>filename</I>
+
+
+</PRE>
+<H2>DESCRIPTION</H2><PRE>
+       <B>readascii</B>  is  a  command to read in the currently open ascii file and
+       write it out in binary form into file <I>filename.</I>  The <B>ascii2binary</B> pro-
+       gram  also  converts TIPSY ascii format into TIPSY binary format.  The
+       <B>oldreadascii</B> command is used for ascii files with the old format.
+
+       If no ascii file is open or if a binary file is already open an  error
+       is  generated.   Ascii  files  are opened using the <B>openascii</B> command.
+       After the binary file is written the ascii  file  is  closed  and  the
+       binary  file <I>filename</I> is opened.  Binary files can be opened or closed
+       using the <B>openbinary</B> and <B>closebinary</B> commands.
+
+       The ascii file should be of the TIPSY ascii form  and  typically  con-
+       tains all the time frames in sequential order.  Each time frame should
+       be of the form:
+
+
+              ntotal, ngas, nstar
+
+              ndimensions
+
+              time
+
+              mass(i), i = 1 to ntotal
+
+              x_position(i), i = 1 to ntotal
+
+              y_position(i), i = 1 to ntotal
+
+              z_position(i), i = 1 to ntotal
+
+              x_velocity(i), i = 1 to ntotal
+
+              y_velocity(i), i = 1 to ntotal
+
+              z_velocity(i), i = 1 to ntotal
+
+              grav_softening_length_dark_particles(i), i = 1 to ndark
+
+              grav_softening_length_star_particles(i), i = 1 to nstar
+
+              density(i), i = 1 to ngas
+
+              temperature(i), i = 1 to ngas
+
+              sph_smoothing_length(i), i = 1 to ngas,
+
+              metals_gas(i), i = 1 to ngas,
+
+              metals_star(i), i = 1 to nstar,
+
+              formation_time(i), i = 1 to nstar,
+
+              potential_energy(i), i = 1 to ntotal,
+
+       where ntotal is the total number of particles, ngas is the  number  of
+       gas particles, ndark is the number of dark matter particles, and nstar
+       is the number of star particles.  The first ngas particles  should  be
+       the gas particles and the last nstar particles should be the star par-
+       ticles with the dark particles being in the middle.   Therefore,  each
+       time frame should contain 9*ntotal+3*ngas+2nstar +3 lines.
+
+       After  the  binary  file  is made a specific time must still be loaded
+       using the <B>loadbinary</B> command.
+
+
+</PRE>
+<H2>SEE ALSO</H2><PRE>
+       <B><A HREF="closeascii.html">closeascii(1)</A></B>, <B><A HREF="closebinary.html">closebinary(1)</A></B>, <B><A HREF="loadbinary.html">loadbinary(1)</A></B>, <B><A HREF="oldreadascii.html">oldreadascii(1)</A></B>, <B>openbi-</B>
+       <B><A HREF="nary.html">nary(1)</A></B>, <B><A HREF="openascii.html">openascii(1)</A></B>
+
+
+
+KQ Release 2.0                  22 MARCH 1994                    <B><A HREF="READASCII.html">READASCII(1)</A></B>
+</PRE>
+<HR>
+<ADDRESS>
+Man(1) output converted with
+<a href="http://www.oac.uci.edu/indiv/ehood/man2html.html">man2html</a>
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,48 @@
+<HTML>
+<BODY>
+<PRE>
+<!-- Manpage converted by man2html 3.0.1 -->
+<B><A HREF="hubble.html">hubble(1)</A></B>                       TIPSY COMMANDS                      <B><A HREF="hubble.html">hubble(1)</A></B>
+
+
+
+
+</PRE>
+<H2>NAME</H2><PRE>
+       hubble - add or remove the Hubble expansion in a box
+
+
+</PRE>
+<H2>SYNOPSIS</H2><PRE>
+       <B>hubble</B> <I>box-number</I> <I>hubble-constant</I> <I>x-center</I> <I>y-center</I> <I>z-center</I>
+
+
+</PRE>
+<H2>DESCRIPTION</H2><PRE>
+       <B>hubble</B>  adds  a  radial  hubble flow to box <I>box-number</I> centered on the
+       coordinates <I>(x-center,</I> <I>y-center,</I> <I>zcenter)</I> with a  Hubble  constant  of
+       <I>hubble-constant.</I>   This  command is useful when converting to and from
+       comoving coordinates.  To add a Hubble flow to the box use a  positive
+       value for <I>hubble-constant</I> and to subtract a hubble flow use a negative
+       value for <I>hubble</I> <I>constant.</I>  NOTE: this command permanently changes the
+       velocities  of  all the particles in box <I>box-number.</I>  To undo a <B>hubble</B>
+       command repeat the command with a <I>hubble-constant</I> of  equal  magnitude
+       but of opposite sign.  If the box <I>box-number</I> is not loaded an error is
+       generated.
+
+
+</PRE>
+<H2>SEE ALSO</H2><PRE>
+       drift (1), pcenter (1), vcenter (1)
+
+
+
+KQ Release 2.0                  22 MARCH 1994                       <B><A HREF="hubble.html">hubble(1)</A></B>
+</PRE>
+<HR>
+<ADDRESS>
+Man(1) output converted with
+<a href="http://www.oac.uci.edu/indiv/ehood/man2html.html">man2html</a>
+</ADDRESS>
+</BODY>
+</HTML>

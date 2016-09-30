@@ -1,0 +1,153 @@
+NagBody: Installation steps details (tested for Yosemite in 2016-09-25)
+
+ÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑ
+1. First install gadgetviewer
+Web page: http://astro.dur.ac.uk/~jch/gadgetviewer/index.html
+
+DEPENDENCIES: 
+
+LibPNG: 
+sudo port install libpng
+
+Cairo: 
+sudo port install cairo
+
+GTK+2:
+sudo port install gtk2 +x11
+
+Go to directory: 
+
+cd $HOME/NagBody_pkg/NagBody_sources/Additional_libs/Gadget
+
+Unpack file:
+
+tar xvf gadgetviewer-1.0.4.tar
+
+Change to directory:
+
+cd gadgetviewer-1.0.6
+
+Configure, make and install:
+
+./configure --prefix=$HOME/NagBody_pkg/local/gadgetviewer --without-plplot 2>&1 | tee configure_gcc.log
+make 2>&1 | tee make_gcc.log
+make install 2>&1 | tee install_gcc.log
+
+Activate its path in the environment (.profile)
+
+
+ÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑ
+2. Installing gadget207 dependencies:
+
+Install gsl (this was already done before).
+
+Go to directory: 
+cd $HOME/NagBody_pkg/NagBody_sources/Additional_libs/Gadget
+
+Unpack file:
+tar xvf openmpi-1.4.3.tar.gz
+
+Change to directory:
+cd openmpi-1.4.3
+
+Configure, make and install:
+
+./configure --prefix=$HOME/NagBody_pkg/local/openmpi --disable-shared --enable-static
+make all install
+
+
+
+Go to directory: 
+cd $HOME/NagBody_pkg/NagBody_sources/Additional_libs/Gadget
+
+Unpack file:
+tar xvf fftw-2.1.5.tar.gz
+
+Change to directory:
+cd fftw-2.1.5
+
+Configure, make and install:
+
+First double without prefix:
+./configure --prefix=$HOME/NagBody_pkg/local/fftw2 --enable-mpi
+make
+make check
+make install
+
+Then in simple precision with prefix 's':
+make distclean
+./configure --prefix=$HOME/NagBody_pkg/local/fftw2 --enable-float --enable-type-prefix --enable-mpi
+make
+make check
+make install
+
+We repeat for double precision
+make distclean
+./configure --prefix=$HOME/NagBody_pkg/local/fftw2 --enable-type-prefix --enable-mpi
+make
+make check
+make install
+
+
+ÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑ
+3. Installing gadget derived codes:
+
+
+Unpack in $HOME gdgt_sph.tar.gz
+cd $HOME
+tar xvf Documents/zip/gdgt_sph.tar.gz
+cd NagBody_pkg
+make -f NagBody install_gdgt_sph
+
+
+Unpack in $HOME gdgt_lcdm.tar.gz
+cd $HOME
+tar xvf Documents/zip/gdgt_lcdm.tar.gz
+cd NagBody_pkg
+make -f NagBody install_gdgt_lcdm
+
+
+
+Installing gadget (version 207) without TreePM method:
+
+Unpack in $HOME gdgt207nopm.tar.gz
+cd $HOME
+tar xvf Documents/zip/gdgt207nopm.tar.gz
+cd NagBody_pkg
+
+execute the commands (both steps are necessary):
+
+make -f NagBody clean_gdgt207nopm simulation=xxx
+make -f NagBody install_gdgt207nopm simulation=xxx
+
+with xxx one of: gassphere, galaxy, cluster or lcdm_gas. With this command you will have a running binary. Now, you may run them.
+
+Go to $HOME/borrame directory, copy the parameter and ic files in a running directory you create for that purpose and:
+
+mpirun -np 4 gdgt207nopm_xxx parameterfile > output &
+
+The parameter file must be consistent with the type of simulation you generate.
+
+
+Installing gadget (version 207) with TreePM method:
+
+Unpack in $HOME gdgt207pm.tar.gz
+cd $HOME
+tar xvf Documents/zip/gdgt207pm.tar.gz
+cd NagBody_pkg
+
+execute the commands (both steps are necessary):
+
+make -f NagBody clean_gdgt207pm simulation=xxx
+make -f NagBody install_gdgt207pm simulation=xxx
+
+with xxx one of: gassphere, galaxy, cluster or lcdm_gas. With this command you will have a running binary. Now, you may run them.
+
+Go to $HOME/borrame directory, copy the parameter and ic files in a running directory you create for that purpose and:
+
+mpirun -np 4 gdgt207pm_xxx parameterfile > output &
+
+The parameter file must be consistent with the type of simulation you generate.
+
+
+

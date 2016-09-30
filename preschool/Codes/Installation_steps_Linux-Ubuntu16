@@ -1,0 +1,136 @@
+NagBody: Installation steps details (tested for Yosemite in 2016-09-25)
+
+(Fue realizado usando una laptop Mac con un linux Ubuntu 16 virtual (reciŽn hecho) con VMWare Fusion)
+
+1. Colocar los empacados de NagBody en Downloads.
+2. Abrirlos todos en $HOME:
+
+cd $HOME
+tar xvf Downloads/zip/nbody_n2.tar.gz
+tar xvf Downloads/zip/model.tar.gz
+tar xvf Downloads/zip/nplot2d.tar.gz
+tar xvf Downloads/zip/analysis_grav.tar.gz
+tar xvf Downloads/zip/gadget207_Addlibs.tar.gz
+
+3. Leer el archivo $HOME/NagBody_pkg/INSTALL
+
+> more NagBody_pkg/INSTALL
+
+Seguir las instrucciones:
+
+cd $HOME/NagBody_pkg
+make -f NagBody install_dirs
+cd $HOME
+cp .bashrc bashrc_nagbody_pkg
+cat bashrc_nagbody_pkg NagBody_pkg/env_config/profilerc > .bashrc
+
+Abrir una nueva terminal para refrescar el ambiente.
+
+4. En la nueva terminal cambiar al directorio $HOME/NagBody_pkg/NagBody_sources/Additional_libs/Gadget
+
+Abrir el archivo gsl-1.14.tar.gz haciendo:
+
+tar xvf gsl-1.14.tar.gz
+cd gsl-1.14
+export CC=gcc
+export CXX=g++
+export F77=gfortran
+export FC=gfortran
+export F90=gfortran
+./configure --prefix=$HOME/NagBody_pkg/local/gsl 2>&1 | tee configure_gcc.log
+make 2>&1 | tee make_gcc.log
+make check 2>&1 | tee check.log
+make install 2>&1 | tee install_gcc.log
+make distclean
+cd ..
+rm -fR gsl-1.14/
+
+5. Cambiar al directorio NagBody_pkg/local, ejecutando:
+
+cd $HOME/NagBody_pkg/local
+sudo apt-get install libx11-dev
+sudo apt-get install gnuplot
+sudo apt-get install xorg-dev
+sudo apt-get install liblasi-dev
+sudo apt-get install swig
+sudo apt-get install tcl
+sudo apt-get install plplot-tcl-dev
+sudo apt-get install libplplot-dev
+ln -s /usr plplot
+cd ..
+
+4. Instalar nbody_n2:
+
+> make -f NagBody install_nbody_n2
+
+5. Abrir una nueva terminal y ah’ (en el $HOME) ejecutar:
+
+> mkdir borrame
+> cd borrame
+> nbody_n2
+
+El programa se ejecuta y cuando termine consultar el man o la ayuda con:
+
+> man nbody_n2
+> nbody_n2 -help
+
+
+6. Regresar a la terminal anterior, en donde se gener— nbody_n2 y hacer:
+
+> make -f NagBody install_model
+
+Haciendo:
+
+> ls -l bin
+
+se listaran los c—digos generados. Tendr‡ nbody_n2 y model, hasta ahora.
+
+7. Generar nplot2d con:
+
+> make -f NagBody install_nplot2d
+
+Seguramente aparecer‡ que hubo un error:
+
+. . .
+/usr/bin/ld: cannot find -lshp
+. . .
+
+Editar el archivo:
+
+sudo vi /usr/lib/x86_64-linux-gnu/pkgconfig/plplotd.pc
+
+(removiendo Ò-lshpÓ, que est‡ en la penœltima l’nea, guarde y salga del editor vi).
+
+Vuelva a ejecutar:
+
+make -f NagBody install_nplot2d
+
+8. Vaya a la terminal en donde hizo el directorio borrame y pruebe nplot2d con:
+
+nplot2d
+
+
+9. Regrese a la terminal en donde est‡ el directorio NagBody_pkg y genere analysis_grav con:
+
+make -f NagBody install_analysis_grav
+
+10. Ahora en la terminal en donde est‡ borrame haga lo siguiente:
+
+mkdir snaps
+model nbody=1024 o=esfera1
+model nbody=1024 o=esfera2 cmx=5 cmy=5 vcmx=-0.5
+model in=esfera1,esfera2 o=esferas
+nbody_n2 ic=esferas tstop=70 o=snaps/snap%04d > output &
+
+Con 
+tail output
+
+Puede ir viendo como va avanzado la corrida. Terminar‡ cuando el tiempo sea 70. Entonces, puede ejecutar:
+
+analysis_grav in=snaps/snap%04d fsnap=1000 at=snap-anim xr=-10:10 yr=-10:10
+
+Con lo que obtendr‡ la animaci—n de la colisi—n de las dos esferas autogravitantes.
+
+
+
+

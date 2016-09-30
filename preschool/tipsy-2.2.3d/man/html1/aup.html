@@ -1,0 +1,73 @@
+<HTML>
+<BODY>
+<PRE>
+<!-- Manpage converted by man2html 3.0.1 -->
+<B><A HREF="ANGLEUP.html">ANGLEUP(1)</A></B>                      TIPSY COMMANDS                     <B><A HREF="ANGLEUP.html">ANGLEUP(1)</A></B>
+
+
+
+
+</PRE>
+<H2>NAME</H2><PRE>
+       angleup - change the viewing angle to edge-on
+
+
+</PRE>
+<H2>SYNOPSIS</H2><PRE>
+       <B>angleup</B> <I>box-number</I> <I>particle</I>
+
+
+</PRE>
+<H2>ALIASES</H2><PRE>
+       <B>aup</B>
+
+
+</PRE>
+<H2>DESCRIPTION</H2><PRE>
+       <B>angleup</B>  changes the viewing angle so that the angular momentum vector
+       of particle type <I>particle</I> in box <I>box-number</I>  points  straight  up  and
+       lies  in  the plane of the screen.  Remember that the angular momentum
+       vector of any box excludes the center of mass motion of the  box.   To
+       view  the particles from the new direction the <B>angleup</B> command must be
+       followed by either the <B>view</B> command to maintain the same plot type  or
+       by <B>viewall,</B> <B>viewarray,</B> <B>viewgas,</B> <B>viewmag,</B> <B>viewpot,</B> <B>viewrad,</B> or <B>viewstar</B>
+       commands.  If the box <I>box-number</I> is not loaded an error is  generated.
+
+
+</PRE>
+<H2>OPTIONS</H2><PRE>
+   <B>Particle</B>
+       The possible choices for <I>particle</I> are:
+
+              <B>all</B>
+                 Use  the angular momentum vector of all the particles in box
+                 <I>box-number</I>
+
+              <B>dark</B>
+                 Use the angular momentum vector of only the dark matter par-
+                 ticles in box <I>box-number</I>
+
+              <B>gas</B>
+                 Use the angular momentum vector of only the gas particles in
+                 box <I>box-number</I>
+
+              <B>star</B>
+                 Use the angular momentum vector of only the  star  particles
+                 in box <I>box-number</I>
+
+
+</PRE>
+<H2>SEE ALSO</H2><PRE>
+       <B><A HREF="rotate.html">rotate(1)</A></B>, <B><A HREF="view.html">view(1)</A></B>
+
+
+
+KQ Release 2.0                  22 MARCH 1994                      <B><A HREF="ANGLEUP.html">ANGLEUP(1)</A></B>
+</PRE>
+<HR>
+<ADDRESS>
+Man(1) output converted with
+<a href="http://www.oac.uci.edu/indiv/ehood/man2html.html">man2html</a>
+</ADDRESS>
+</BODY>
+</HTML>

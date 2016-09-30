@@ -1,0 +1,99 @@
+<HTML>
+<BODY>
+<PRE>
+<!-- Manpage converted by man2html 3.0.1 -->
+<B><A HREF="OLDREADASCII.html">OLDREADASCII(1)</A></B>                 TIPSY COMMANDS                <B><A HREF="OLDREADASCII.html">OLDREADASCII(1)</A></B>
+
+
+
+
+</PRE>
+<H2>NAME</H2><PRE>
+       oldreadascii - read an old format ascii file
+
+
+</PRE>
+<H2>SYNOPSIS</H2><PRE>
+       <B>oldreadascii</B> <I>filename</I> <I>type</I>
+
+
+</PRE>
+<H2>DESCRIPTION</H2><PRE>
+       <B>oldreadascii</B>  is a command to read in the currently open ascii file if
+       it is in the old ascii format and write it out  in  binary  form  into
+       file <I>filename.</I>  This command only exists to preserve backwards compat-
+       ibility.  The <B>readascii</B> command is used for ascii files with the usual
+       format.   If no ascii file is open or if a binary file is already open
+       an error is generated.  Ascii files are  opened  using  the  <B>openascii</B>
+       command  and  binary  files  are closed using the <B>closebinary</B> command.
+       After the binary file is written the ascii  file  is  closed  and  the
+       binary file <I>file-name</I> is opened.  After the binary file is made a spe-
+       cific time must still be loaded using the  <B>loadbinary</B>  command  before
+       any plotting can be done.
+
+       The  ascii  file  should  be of the old ascii form and contain all the
+       time frames in sequential order.  If  <I>type</I>  is  <B>sph</B>  each  time  frame
+       should be of the form:
+
+
+              ntotal, ndimensions, time, ngas, nstar
+
+              mass(i), i = 1 to ntotal
+
+              x_position(i), i = 1 to ntotal
+
+              y_position(i), i = 1 to ntotal
+
+              z_position(i), i = 1 to ntotal
+
+              x_velocity(i), i = 1 to ntotal
+
+              y_velocity(i), i = 1 to ntotal
+
+              z_velocity(i), i = 1 to ntotal
+
+              density(i), i = 1 to ngas
+
+              temperature(i), i = 1 to ngas
+
+              sph_smoothing_length(i), i = 1 to ngas,
+       where  ntotal  is the total number of particles, ngas is the number of
+       gas particles, and nstar is the number of star particles.   The  first
+       ngas  particles  should be the gas particles and the last nstar parti-
+       cles should be the star particles with the dark particles being in the
+       middle.  If <I>type</I> is <B>nosph</B> each time frame should be of the form:
+
+
+              ntotal, ndimensions, time
+
+              mass(i), i = 1 to ntotal
+
+              x_position(i), i = 1 to ntotal
+
+              y_position(i), i = 1 to ntotal
+
+              z_position(i), i = 1 to ntotal
+
+              x_velocity(i), i = 1 to ntotal
+
+              y_velocity(i), i = 1 to ntotal
+
+              z_velocity(i), i = 1 to ntotal.
+
+
+</PRE>
+<H2>SEE ALSO</H2><PRE>
+       <B><A HREF="closeascii.html">closeascii(1)</A></B>,     <B><A HREF="closebinary.html">closebinary(1)</A></B>,     <B><A HREF="loadbinary.html">loadbinary(1)</A></B>,    <B><A HREF="openascii.html">openascii(1)</A></B>,
+       <B><A HREF="readascii.html">readascii(1)</A></B>
+
+
+
+KQ Release 2.0                  22 MARCH 1994                 <B><A HREF="OLDREADASCII.html">OLDREADASCII(1)</A></B>
+</PRE>
+<HR>
+<ADDRESS>
+Man(1) output converted with
+<a href="http://www.oac.uci.edu/indiv/ehood/man2html.html">man2html</a>
+</ADDRESS>
+</BODY>
+</HTML>

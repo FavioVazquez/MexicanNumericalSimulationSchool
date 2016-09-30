@@ -1,0 +1,61 @@
+<HTML>
+<BODY>
+<PRE>
+<!-- Manpage converted by man2html 3.0.1 -->
+<B><A HREF="VISTA.html">VISTA(1)</A></B>                        TIPSY COMMANDS                       <B><A HREF="VISTA.html">VISTA(1)</A></B>
+
+
+
+
+</PRE>
+<H2>NAME</H2><PRE>
+       vista - make FITS images
+
+
+</PRE>
+<H2>SYNOPSIS</H2><PRE>
+       <B>vista</B> <I>type</I> <I>low</I> <I>high</I> <I>file</I> <I>size</I> <I>[</I> <I>vel-min</I> <I>velmax</I> <I>]</I>
+
+
+</PRE>
+<H2>DESCRIPTION</H2><PRE>
+       <B>vista</B>  creates  a  fits  image of <I>size</I> pixels on a side of the current
+       projection and writes it to <I>file.</I>  The values in  the  fits  file  are
+       base  10  logarithms  of  various smooth quantities and are limited to
+       values between <I>low</I> and <I>high.</I>  <I>type</I> determines what variables are  out-
+       put,  and  is one of: <I>density</I> (gas density), <I>temperature</I> (gas tempera-
+       ture), <I>pressure</I> (gas pressure), <I>cooling</I> (gas cooling  time),  <I>formstar</I>
+       (star  formation  rate),  <I>star</I> (star density), <I>lumi,</I> <I>lumv,</I> <I>lumb,</I> <I>lumu,</I>
+       <I>lumuu</I> (I, V, B, U or UU band stellar luminosity),  <I>dark</I>  (dark  matter
+       density),  <I>hneutral</I>  (neutral  hydrogen  column density), <I>heI</I> (neutral
+       helium column density), and <I>heII</I> (singly ionized  helium  column  den-
+       sity).
+
+       All  smoothed  quantities  are  calculated by projecting the particles
+       onto the grid using a Smooth Particle Hydrodynamics technique  with  a
+       spline  softening kernel.  For gas quantities the smoothing length  is
+       set by the <I>hsmooth</I> parameter of each particle.  For dark or star quan-
+       tities, the smoothing parameters can be set by the <B>smooth</B> command.
+
+       For  the  species column densities, velocity cuts can be made with the
+       optional parameters <I>vel-min</I> and <I>vel-max.</I>  to simulate  emmission  seen
+       within a limited spectral range.
+
+
+
+</PRE>
+<H2>SEE ALSO</H2><PRE>
+       <B><A HREF="coolconstants.html">coolconstants(1)</A></B>,   <B><A HREF="formconstants.html">formconstants(1)</A></B>,   <B><A HREF="lumconstants.html">lumconstants(1)</A></B>,  <B><A HREF="redshift.html">redshift(1)</A></B>,
+       <B>smooth(1)</B> <B><A HREF="viscconstants.html">viscconstants(1)</A></B>
+
+
+
+Katz and Quinn Release 2.0      22 MARCH 1994                        <B><A HREF="VISTA.html">VISTA(1)</A></B>
+</PRE>
+<HR>
+<ADDRESS>
+Man(1) output converted with
+<a href="http://www.oac.uci.edu/indiv/ehood/man2html.html">man2html</a>
+</ADDRESS>
+</BODY>
+</HTML>

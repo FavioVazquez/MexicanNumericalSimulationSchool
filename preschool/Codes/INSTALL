@@ -1,0 +1,112 @@
+################################################################################
+NagBody: Installation
+################################################################################
+
+NOTE: Read the Installation_steps_OSX_00_requirements file in the INSTALL_dir directory.
+
+Read the corresponding code Readme file in directory Readmes to get installation instructions of a particular NagBody code.
+
+The first steps to do in order to start compiling a NagBody code are:
+
+1. Unpack the code file in your $(HOME):
+
+tar xvf nagbody_name_code.tar.gz
+
+2. Move to the NagBody directory:
+
+cd NagBody_pkg
+
+3. Create directories where binaries and man pages will be located, as well as other useful directories:
+
+make -f NagBody install_dirs
+
+4. Change to your HOME:
+
+cd $HOME
+
+5. Modify your profile (it can be ".profile" for Mac OS X or ".bashrc" for Linux):
+
+For a Mac OS X:
+
+cp .profile profile_nagbody_bak
+cat profile_nagbody_bak NagBody_pkg/env_config/profilerc > .profile
+
+For a Linux:
+
+cp .bashrc bashrc_nagbody_bak
+cat bashrc_nagbody_bak NagBody_pkg/env_config/profilerc > .bashrc
+
+6. Open a new terminal to refresh your environment. 
+
+7. Change to NagBody directory:
+
+cd NagBody_pkg
+
+8. Tune the file "Machines/machine.inc" or "Machines/pmachines.inc" in order to use the right compilers and libraries. See in this directory the files in there for several examples. 
+
+9. Now create one binary code, the one you unpacked first. In the Readmes folder there are several Readme files. Readme them to follow the making process. For example, Ònbody_n2Ó:
+
+make -f NagBody install_nbody_n2
+
+in the ÒbinÓ directory you will have the Ònbody_n2Ó code. Then go to your $HOME directory and make a ÒborrameÓ folder:
+
+mkdir borrame
+cd borrame
+nbody_n2
+
+Last command run the nbody code and you will see in the terminal some output. Read the manual to see how to use the code:
+
+man nbody_n2
+
+ThatÕs it.
+
+
+################################################################################
+OTHER NAGBODY CODE:
+
+Read the Installation_steps_OSX_01_Gravitation file in the INSTALL_dir directory
+
+
+################################################################################
+PLPLOT:
+
+Description of the installation steps for the plplot package needed for the visualization codes and in the readme file in the folder Readmes/Additional_libs.
+
+The plplot libraries are needed to generate nplot2d, analysis_XXX visualization codes.
+
+NOTE: If plplot libraries can be installed using apt-get (linux) or Ports (Mac OS X) or by other means then just make the following link:
+
+> cd $HOME/NagBody_pkg/local
+> ln -s /usr plplot
+
+Make sure xwin and eps or ps drivers were installed!!
+
+For example, for Mac OSX:
+
+cd $HOME/NagBody_pkg/local
+sudo port install plplot510
+ln -s /opt/local/lib/plplot510/ plplot
+
+%%%%%%%%%%%%%%%%%%%
+
+
+################################################################################
+GFORTRAN:
+In case fortran is needed should be installed with
+
+Mac OS X Mac Ports:
+sudo port install gcc46 +gfortran
+
+%%%%%%%%%%%%%%%%%%%
+
+
+################################################################################
+GSL LIBRARIES:
+
+
+cd $HOME/NagBody_pkg/local
+sudo port install gsl
+ln -s /opt/local gsl
+
+%%%%%%%%%%%%%%%%%%%
+

@@ -1,0 +1,73 @@
+<HTML>
+<BODY>
+<PRE>
+<!-- Manpage converted by man2html 3.0.1 -->
+<B><A HREF="drift.html">drift(1)</A></B>                        TIPSY COMMANDS                       <B><A HREF="drift.html">drift(1)</A></B>
+
+
+
+
+</PRE>
+<H2>NAME</H2><PRE>
+       hubble - extrapolate particle positions in a box
+
+
+</PRE>
+<H2>SYNOPSIS</H2><PRE>
+       <B>drift</B> <I>box-number</I> <I>particle</I> <I>delta-t</I>
+
+
+</PRE>
+<H2>DESCRIPTION</H2><PRE>
+       <B>drift</B>  drifts  the  particles  of  type <I>particle</I> in box <I>box-number</I> for
+       <I>delta-t</I> using the particle's velocity.  This  command  is  useful  for
+       interpolating  between time frames when making movies.  To move parti-
+       cles forward in time use a positive value for <I>delta-t</I> and to move par-
+       ticles  backward in time use a negative value for <I>delta-t.</I>  NOTE: this
+       command permanently changes the velocities of all the particles in box
+       <I>box-number.</I>  To undo a <B>drift</B> command repeat the command with a <I>delta-t</I>
+       of equal magnitude but of opposite sign.  If the box <I>box-number</I> is not
+       loaded an error is generated.
+
+
+</PRE>
+<H2>OPTIONS</H2><PRE>
+   <B>Particle</B>
+       The possible choices for <I>particle</I> are:
+
+              <B>all</B>
+                 Adjust  the  velocities of all the particles in box <I>box-num-</I>
+                 <I>ber.</I>
+
+              <B>baryon</B>
+                 Adjust the velocities of all the gas and star  particles  in
+                 box <I>box-number.</I>
+
+              <B>dark</B>
+                 Adjust  the  velocities of only the dark matter particles in
+                 box <I>box-number</I>
+
+              <B>gas</B>
+                 Adjust the velocities of only the gas particles in box  <I>box-</I>
+                 <I>number.</I>
+
+              <B>star</B>
+                 Adjust the velocities of only the star particles in box <I>box-</I>
+                 <I>number.</I>
+
+
+</PRE>
+<H2>SEE ALSO</H2><PRE>
+       hubble (1), pcenter (1), vcenter (1)
+
+
+
+KQ Release 2.0                  22 MARCH 1994                        <B><A HREF="drift.html">drift(1)</A></B>
+</PRE>
+<HR>
+<ADDRESS>
+Man(1) output converted with
+<a href="http://www.oac.uci.edu/indiv/ehood/man2html.html">man2html</a>
+</ADDRESS>
+</BODY>
+</HTML>
