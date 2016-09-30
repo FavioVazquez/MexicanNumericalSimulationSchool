@@ -13,11 +13,15 @@ The Pre-school folder will eventually contain the
  - Available codes used in sessions
  - Presentations given, by topics/speaker/day
  
-## Pre-school installation
+## Pre-school installation and Bibliography
 
 Follow the instructions for installation here
 
-https://github.com/FavioVazquez/MexicanNumericalSimulationSchool/blob/master/Installation_manual.md
+* https://github.com/FavioVazquez/MexicanNumericalSimulationSchool/blob/master/Installation_manual.md
+
+The bibliography can be found as a whole compressed .zip file at 
+
+* https://github.com/FavioVazquez/MexicanNumericalSimulationSchool/blob/master/preschool/Bibliography.zip
 
 
 # Pre-School Projects  
