@@ -8,29 +8,11 @@
 
 The Pre-school folder will eventually contain the 
 
- - Links to youtube lectures
- - Reading Materials
- - Available codes used in sessions
- - Presentations given, by topics/speaker/day
- 
-## Pre-school installation and Bibliography
-
-Follow the instructions for installation here
-
-* https://github.com/FavioVazquez/MexicanNumericalSimulationSchool/blob/master/Installation_manual.md
-
-The bibliography can be found as a whole compressed .zip file at 
-
-* [Bibliography](https://github.com/FavioVazquez/MexicanNumericalSimulationSchool/blob/master/preschool/Bibliography.zip)
-
-
-# Pre-School Projects  
- The optional projects are as follows:
- 
-* Octavio's [2 projects'](https://github.com/FavioVazquez/MexicanNumericalSimulationSchool/tree/master/preschool/Projects)
-	
-* Mario's [project's specs] are at ()
-	* 
+ - Links to [youtube lectures](https://www.youtube.com/user/IFUNAM/videos)
+ - [Reading Materials]((https://github.com/FavioVazquez/MexicanNumericalSimulationSchool/blob/master/preschool/Bibliography.zip)
+ - [Available codes and installations](https://github.com/FavioVazquez/MexicanNumericalSimulationSchool/blob/master/Installation_manual.mdused in sessions)
+ - [Presentations given](https://github.com/FavioVazquez/MexicanNumericalSimulationSchool/tree/master/preschool/Presentations), by topics/speaker/day
+ - [Projects specifications](https://github.com/FavioVazquez/MexicanNumericalSimulationSchool/tree/master/preschool/Projects) 
  
 # School
  
