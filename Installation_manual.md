@@ -15,8 +15,7 @@ This instruction manual is to help install the required packages, libraries and 
  - gfortran and gcc compiler
  - python yt [library]( http://yt-project.org/):
  - [tipsy](http://www-hpcc.astro.washington.edu/tools/tipsy/tipsy.html)
- - python plplot through NagBody
- - gadget viewer
+ - 14 codes through NagBody
  - MPI
 
 ### Installation instructions - Ubuntu
@@ -46,7 +45,7 @@ Note that you must have Python installed in order to install and run yt
       - Now run a make to finish installation: 
       		`make`
       
-   4. Install plplot library and gadgetviewer through NagBody
+   4. Install the 14 codes necessary through NagBody -- [available here](http://iac.edu.mx/mexsimschool/pre-school/precourses/)
    
       -  Follow this [INSTALL](https://github.com/FavioVazquez/MexicanNumericalSimulationSchool/tree/master/preschool/Codes) file
       - Follow the install file [Installation_steps_Linux-Ubuntu16](https://github.com/FavioVazquez/MexicanNumericalSimulationSchool/blob/master/preschool/Codes/Installation_steps_Linux-Ubuntu16)
