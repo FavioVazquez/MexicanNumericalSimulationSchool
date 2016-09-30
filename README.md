@@ -13,11 +13,19 @@ The Pre-school folder will eventually contain the
  - Available codes used in sessions
  - Presentations given, by topics/speaker/day
  
-# Pre-School Projects 
- 
+## Pre-school installation
+
+Follow the instructions for installation here
+
+https://github.com/FavioVazquez/MexicanNumericalSimulationSchool/blob/master/Installation_manual.md
+
+
+# Pre-School Projects  
  The optional projects are as follows:
  
  1. TBA
  2. TBA
  3. TBA
+ 
+# School
  
