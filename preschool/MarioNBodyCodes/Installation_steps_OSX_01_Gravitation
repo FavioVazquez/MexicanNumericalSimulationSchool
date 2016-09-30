@@ -1,0 +1,59 @@
+NagBody: Installation steps details (tested for Yosemite in 2016-09-25)
+
+INSTALLING GRAVITATION SIMPLE CODES:
+
+1. Check that you have done what is in Installation_steps_OSX_00_requirements file.
+
+
+INSTALLING NAGBODY CODES::
+
+2. Unpack in $HOME nbody_n2.tar.gz (there have not to be a NagBody_pkg directory, the first time)
+cd $HOME
+tar xvf Documents/zip/nbody_n2.tar.gz
+
+(We have assumed the packages files are in $HOME/Documents/zip).
+
+Follow the instruction in INSTALL file in the NagBody_pkg directory and also you can read the code corresponding readme file in directory Readmes.
+
+3. Make the links:
+cd $HOME/NagBody_pkg/local
+ln -s /opt/local gsl
+ln -s /opt/local/lib/plplot510/ plplot
+
+
+4. Unpack in $HOME model.tar.gz
+cd $HOME
+tar xvf Documents/zip/model.tar.gz
+cd NagBody_pkg
+make -f NagBody install_model
+
+5. Unpack in $HOME nplot2d.tar.gz
+cd $HOME
+tar xvf Documents/zip/nplot2d.tar.gz
+cd NagBody_pkg
+cd local
+ln -s /opt/local/lib/plplot510/ plplot
+make -f NagBody install_nplot2d
+
+6. Unpack in $HOME analysis_grav.tar.gz
+cd $HOME
+tar xvf Documents/zip/analysis_grav.tar.gz
+cd NagBody_pkg
+make -f NagBody install_analysis_grav
+
+
+IF THERE WAS NOT PROBLEMS IN COMPILING THE CODES THEN TEST THEM ALL::
+
+cd $HOME
+mkdir borrame
+cd borrame
+model nbody=1024 o=esfera1
+model nbody=1024 o=esfera2 vcmx=-1 cmx=5 cmy=5
+model in=esfera1,esfera2 o=esferas
+mkdir snaps
+nbody_n2 ic=esferas tstop=100 o=snaps/snap%04d > output &
+analysis_grav in=snaps/snap%04d at=snap-anim fsnap=500 xr=-10:10 yr=-10:10
+
+
+
+
