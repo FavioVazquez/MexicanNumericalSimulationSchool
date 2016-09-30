@@ -1,0 +1,71 @@
+<HTML>
+<BODY>
+<PRE>
+<!-- Manpage converted by man2html 3.0.1 -->
+<B><A HREF="ARRAYSTAT.html">ARRAYSTAT(1)</A></B>                    TIPSY COMMANDS                   <B><A HREF="ARRAYSTAT.html">ARRAYSTAT(1)</A></B>
+
+
+
+
+</PRE>
+<H2>NAME</H2><PRE>
+       arraystat - print statistics about the array values
+
+
+</PRE>
+<H2>SYNOPSIS</H2><PRE>
+       <B>arraystat</B> <I>box-number</I> <I>particle</I>
+
+
+</PRE>
+<H2>DESCRIPTION</H2><PRE>
+       <B>arraystat</B>  calculates  the  mean,  median,  and  upper quartile of the
+       loaded array values for the particles of type <I>particle</I> in box <I>box-num-</I>
+       <I>ber.</I>   An  array  is loaded using the <B>readarray</B> command.  Boxes can be
+       created and loaded using the <B>makebox,</B> <B>setbox,</B> or  <B>setsphere</B>  commands.
+       If  no array is loaded or if the box <I>box-number</I> is not loaded an error
+       is generated.
+
+
+</PRE>
+<H2>OPTIONS</H2><PRE>
+   <B>Particle</B>
+       The possible choices for <I>particle</I> are:
+
+              <B>all</B>
+                 Use the array values of all the particles in box  <I>box-number</I>
+                 when calculating the statistics.
+
+              <B>baryon</B>
+                 Use  the  array values of only the star and gas particles in
+                 box <I>box-number</I> when calculating the statistics.
+
+              <B>dark</B>
+                 Use the array values of only the dark  matter  particles  in
+                 box <I>box-number</I> when calculating the statistics.
+
+              <B>gas</B>
+                 Use  the  array values of only the gas particles in box <I>box-</I>
+                 <I>number</I> when calculating the statistics.
+
+              <B>star</B>
+                 Use the array values of only the star particles in box  <I>box-</I>
+                 <I>number</I> when calculating the statistics.
+
+
+</PRE>
+<H2>SEE ALSO</H2><PRE>
+       <B><A HREF="boxstat.html">boxstat(1)</A></B>, <B><A HREF="makebox.html">makebox(1)</A></B>, <B><A HREF="readarray.html">readarray(1)</A></B>, <B><A HREF="setbox.html">setbox(1)</A></B>, <B><A HREF="setsphere.html">setsphere(1)</A></B>, <B>viewar-</B>
+       <B><A HREF="ray.html">ray(1)</A></B>
+
+
+
+KQ Release 2.0                  22 MARCH 1994                    <B><A HREF="ARRAYSTAT.html">ARRAYSTAT(1)</A></B>
+</PRE>
+<HR>
+<ADDRESS>
+Man(1) output converted with
+<a href="http://www.oac.uci.edu/indiv/ehood/man2html.html">man2html</a>
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,51 @@
+<HTML>
+<BODY>
+<PRE>
+<!-- Manpage converted by man2html 3.0.1 -->
+<B><A HREF="READOLDBIN.html">READOLDBIN(1)</A></B>                   TIPSY COMMANDS                  <B><A HREF="READOLDBIN.html">READOLDBIN(1)</A></B>
+
+
+
+
+</PRE>
+<H2>NAME</H2><PRE>
+       readoldbin - read an old format binary file
+
+
+</PRE>
+<H2>SYNOPSIS</H2><PRE>
+       <B>readoldbin</B> <I>filename</I>
+
+
+</PRE>
+<H2>DESCRIPTION</H2><PRE>
+       <B>readoldbin</B>  reads  an  old, version 1 format binary file from the cur-
+       rently open binary file and writes out a current  binary  format  file
+       into  the  file  <I>filename.</I>   After  the  binary  file  is  written the
+       orginally open binary file is closed and the binary file  <I>filename</I>  is
+       opened.   Binary files are normally created using either the <B>readascii</B>
+       command or the <B>ascii2binary</B> program.
+
+       After the binary file is made a specific time  must  still  be  loaded
+       using the <B>loadbinary</B> command.
+
+       If  no binary file is open an error is generated.  Binary files can be
+       opened using the <B>openbinary</B> command.  Binary files can be closed using
+       the <B>closebinary</B> command.
+
+
+</PRE>
+<H2>SEE ALSO</H2><PRE>
+       <B><A HREF="closebinary.html">closebinary(1)</A></B> <B><A HREF="loadbinary.html">loadbinary(1)</A></B>, <B><A HREF="openbinary.html">openbinary(1)</A></B>, <B><A HREF="readascii.html">readascii(1)</A></B>
+
+
+
+KQ Release 2.0                  22 MARCH 1994                   <B><A HREF="READOLDBIN.html">READOLDBIN(1)</A></B>
+</PRE>
+<HR>
+<ADDRESS>
+Man(1) output converted with
+<a href="http://www.oac.uci.edu/indiv/ehood/man2html.html">man2html</a>
+</ADDRESS>
+</BODY>
+</HTML>

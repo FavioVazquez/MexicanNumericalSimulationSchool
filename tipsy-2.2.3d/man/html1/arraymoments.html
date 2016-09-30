@@ -1,0 +1,108 @@
+<HTML>
+<BODY>
+<PRE>
+<!-- Manpage converted by man2html 3.0.1 -->
+<B><A HREF="ARRAYMOMENTS.html">ARRAYMOMENTS(1)</A></B>                 TIPSY COMMANDS                <B><A HREF="ARRAYMOMENTS.html">ARRAYMOMENTS(1)</A></B>
+
+
+
+
+</PRE>
+<H2>NAME</H2><PRE>
+       arraymoments  -  write the shape as computed in shells sorted by array
+       values
+
+
+</PRE>
+<H2>SYNOPSIS</H2><PRE>
+       <B>arraymoments</B> <I>box-number</I> <I>center-box-number</I> <I>particle</I> <I>binning</I>  <I>bin-number</I>
+       <I>filename</I> <I>bin-count</I> <I>increment</I> <I>radius-bin-count</I>
+
+
+</PRE>
+<H2>DESCRIPTION</H2><PRE>
+       <B>arraymoments</B> is a command that produces a file of name, <I>filename,</I> that
+       contains various physical parameters that relate to the shape and ori-
+       entation of the density distribution for particles of type <I>particle</I> in
+       box, <I>box-number.</I>  If the boxes <I>box-number</I> or <I>center-box-number</I> are not
+       loaded  an  error  is  generated.  An  array  must be loaded using the
+       <B>readarray</B> command for particle grouping.  The shapes are calculated by
+       finding  the  principle  moments of inertia for each bin of particles.
+       Particles are grouped in bins based on their array values in  decreas-
+       ing  order.  The initial guess for the center of the density distribu-
+       tion is taken to be the center of mass of box <I>center-box-number.</I>   The
+       <I>binning</I> argument refers to how the particles are binned, either in one
+       large bin that expands its number of particles or in shells  of  equal
+       particle  number.   There  are <I>bin-count</I> particles in a shell and each
+       successive bin includes an additional number  of  particles  equal  to
+       <I>increment.</I>   The  number  of particles used to calculate the radius of
+       the bin is given by <I>radius-bin-count</I> and should generally  be  greater
+       than 600 and must be less than or equal to <I>bin-count.</I>
+
+       The  output  file  has  the  following columns: radius, b/a, c/a, phi,
+       theta, psi, center-x,center-y,center-z, S1, S2 and  particlemax  where
+       b/a  refers  to  the  ratio between the intermediate axis and the long
+       axis and c/a refers to the ratio between  the  short  and  long  axes.
+       Phi,  theta and psi refer to the Euler angles that describe the orien-
+       tation of the density distribution.  S1 and S2 are  measures  of  pro-
+       lateness  and  sphericity defined in Babel and Starkman (Ap.J. 401:28,
+       1992).  Particlemax is the maximum rank of the particles in each  bin.
+
+
+</PRE>
+<H2>OPTIONS</H2><PRE>
+   <B>Particle</B>
+       The possible choices for <I>particle</I> are:
+
+              <B>all</B>
+                 Use the all the particles in box <I>box-number</I>
+
+              <B>dark</B>
+                 Use only the dark matter particles in box <I>box-number</I>
+
+              <B>gas</B>
+                 Use only the gas particles in box <I>box-number</I>
+
+              <B>star</B>
+                 Use only the star particles in box <I>box-number</I>
+
+   <B>Binning</B>
+       The possible choices for <I>binning</I> are:
+
+              <B>bin</B>
+                 Make  <I>bin-number</I>  bins starting with <I>bin-count</I> particles and
+                 increasing the number of particles included by <I>increment</I> for
+                 each successive bin.
+
+              <B>shell</B>
+                 Make  <I>bin-number</I>  shells containing <I>bin-count</I> particles each
+                 and incrementing the maximum and minimum particle ranking by
+                 <I>increment</I> for each shell.
+
+
+</PRE>
+<H2>SEE ALSO</H2><PRE>
+       <B><A HREF="profile.html">profile(1)</A></B>, <B><A HREF="rotationcurve.html">rotationcurve(1)</A></B>,
+
+
+</PRE>
+<H2>BUGS</H2><PRE>
+       While  any  array could be read in for use with arraymoments, the com-
+       mand was designed to be used with density arrays and so particles  are
+       selected  from  high  to low array values. Thus when using array types
+       that increase with radius the  outer-most  particles  will  be  binned
+       first, and so the <I>bin</I> option would not behave as desired. If necessary
+       the array could be raised to the -1 power before loading  for  sorting
+       purposes.
+
+
+
+                                17 AUGUST 2006                <B><A HREF="ARRAYMOMENTS.html">ARRAYMOMENTS(1)</A></B>
+</PRE>
+<HR>
+<ADDRESS>
+Man(1) output converted with
+<a href="http://www.oac.uci.edu/indiv/ehood/man2html.html">man2html</a>
+</ADDRESS>
+</BODY>
+</HTML>

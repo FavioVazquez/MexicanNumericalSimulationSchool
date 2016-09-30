@@ -1,0 +1,56 @@
+<HTML>
+<BODY>
+<PRE>
+<!-- Manpage converted by man2html 3.0.1 -->
+<B><A HREF="READMACRO.html">READMACRO(1)</A></B>                    TIPSY COMMANDS                   <B><A HREF="READMACRO.html">READMACRO(1)</A></B>
+
+
+
+
+</PRE>
+<H2>NAME</H2><PRE>
+       readmacro - read a macro file
+
+
+</PRE>
+<H2>SYNOPSIS</H2><PRE>
+       <B>readmacro</B> <I>macro-filename</I>
+
+
+</PRE>
+<H2>ALIASES</H2><PRE>
+       <B>rmac</B>
+
+
+</PRE>
+<H2>DESCRIPTION</H2><PRE>
+       <B>readmacro</B> reads macro's from the file <I>macro-filename.</I>  The file <I>macro-</I>
+       <I>filename</I> can contain many different macro's.  A macro is a  sequential
+       list  of  tipsy  commands.  In the file <I>macro-filename</I> each macro must
+       have as it first line the name of the  macro  and  as  its  last  line
+       "end".   If  a  macro with that name already exists it is deleted when
+       the new macro is read.  In the file put one command  per  line.   Many
+       different  macro's can be in the one file <I>macro-filename</I> one after the
+       other.
+
+       Macro's can be executed using the <B>macro</B> command.  Macro's can be  cre-
+       ated interactively using the <B>makemacro</B> command and can be written to a
+       file using the <B>writemacro</B> command.  Macro's can be deleted  using  the
+       <B>deletemacro</B> command.
+
+
+</PRE>
+<H2>SEE ALSO</H2><PRE>
+       <B><A HREF="deletemacro.html">deletemacro(1)</A></B>, <B><A HREF="macro.html">macro(1)</A></B>, <B><A HREF="makemacro.html">makemacro(1)</A></B>, <B><A HREF="writemacro.html">writemacro(1)</A></B>
+
+
+
+KQ Release 2.0                  22 MARCH 1994                    <B><A HREF="READMACRO.html">READMACRO(1)</A></B>
+</PRE>
+<HR>
+<ADDRESS>
+Man(1) output converted with
+<a href="http://www.oac.uci.edu/indiv/ehood/man2html.html">man2html</a>
+</ADDRESS>
+</BODY>
+</HTML>

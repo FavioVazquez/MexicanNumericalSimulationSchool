@@ -1,0 +1,60 @@
+<HTML>
+<BODY>
+<PRE>
+<!-- Manpage converted by man2html 3.0.1 -->
+<B><A HREF="SETSPHERE.html">SETSPHERE(1)</A></B>                    TIPSY COMMANDS                   <B><A HREF="SETSPHERE.html">SETSPHERE(1)</A></B>
+
+
+
+
+</PRE>
+<H2>NAME</H2><PRE>
+       setsphere - make and load a spherical "box" from the command line
+
+
+</PRE>
+<H2>SYNOPSIS</H2><PRE>
+       <B>setsphere</B> <I>box</I> <I>xcenter</I> <I>ycenter</I> <I>zcenter</I> <I>radius</I>
+
+
+</PRE>
+<H2>DESCRIPTION</H2><PRE>
+       <B>setsphere</B>  is used to define the boundaries of <I>box</I> through the command
+       line.  The requested box must be between 1 and <I>MAXBOX</I> or an error will
+       be  generated.   The value of <I>MAXBOX</I> can be found by using the <B>version</B>
+       command.  The box is a sphere of radius <I>radius</I> centered on the coordi-
+       nates <I>(xcenter,</I> <I>ycenter,</I> <I>zcenter).</I>
+
+       Once  a box is made and loaded it still isn't the active box for plot-
+       ting until the <B>activatebox</B> command is used.  Boxes are  removed  using
+       the <B>unload</B> command.
+
+       Boxes  with  numbers  greater than box 0 cannot be made until box 0 is
+       loaded.  Boxes can also be made and loaded using the <B>makebox</B> and  <B>set-</B>
+       <B>box</B>  commands.   Box  0  can also be made and loaded using the <B>loadall</B>
+       command.
+
+
+</PRE>
+<H2>SEE ALSO</H2><PRE>
+       <B>activatebox(1),</B> <B>loadall(1),</B>  <B>makebox(1),</B>  <B>setbox(1),</B>  <B>unload(1),</B>  <B>ver-</B>
+       <B>sion(1)</B>
+
+
+</PRE>
+<H2>BUGS</H2><PRE>
+       The  volume of the box is not done correctly in commands such as <B>boxs-</B>
+       <B>tat</B> and the box is not plotted correctly when <B>showboxes</B> is <I>yes</I> if  the
+       box is spherical.
+
+
+
+KQ Release 2.0                  22 MARCH 1994                    <B><A HREF="SETSPHERE.html">SETSPHERE(1)</A></B>
+</PRE>
+<HR>
+<ADDRESS>
+Man(1) output converted with
+<a href="http://www.oac.uci.edu/indiv/ehood/man2html.html">man2html</a>
+</ADDRESS>
+</BODY>
+</HTML>

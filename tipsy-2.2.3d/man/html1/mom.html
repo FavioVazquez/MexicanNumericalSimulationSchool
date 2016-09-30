@@ -1,0 +1,94 @@
+<HTML>
+<BODY>
+<PRE>
+<!-- Manpage converted by man2html 3.0.1 -->
+<B><A HREF="MOMENTS.html">MOMENTS(1)</A></B>                      TIPSY COMMANDS                     <B><A HREF="MOMENTS.html">MOMENTS(1)</A></B>
+
+
+
+
+</PRE>
+<H2>NAME</H2><PRE>
+       moments - write the shape as a funtion of radius
+
+
+</PRE>
+<H2>SYNOPSIS</H2><PRE>
+       <B>moments</B> <I>box-number</I> <I>center-box-number</I> <I>particle</I> <I>binning</I> <I>bin-number</I> <I>file-</I>
+       <I>name</I> <I>minimum</I><B>_</B><I>radius</I>
+
+
+</PRE>
+<H2>DESCRIPTION</H2><PRE>
+       <B>moments</B> is a command that produces a file of name, <I>filename,</I> that con-
+       tains  various physical parameters that relate to the shape and orien-
+       tation of the density distribution for particles of type  <I>particle</I>  in
+       box, <I>box-number.</I>  If the boxes <I>box-number</I> or <I>center-box-number</I> are not
+       loaded an error is generated.  The shapes and orientations are  calcu-
+       lated  using the iterative technique described in Katz (Ap.J. 368:325,
+       1991).  The initial guess for the center of the  density  distribution
+       is  taken to be the center of mass of box <I>center-box-number.</I>  The <I>bin-</I>
+       <I>ning</I> argument refers to how the particles are binned, either  linearly
+       or  log  in  radius.  There are <I>bin-number</I> equal size bins distributed
+       equally in radius or log radius between <I>minimum</I><B>_</B><I>radius</I> and the size of
+       box <I>box-number</I> depending on the <I>binning</I> argument.  The output file has
+       the following columns: radius, b/a,  c/a,  phi,  theta,  psi,  center-
+       x,center-y,and  center-z  where  b/a  refers  to the ratio between the
+       intermediate axis and the long  axis  and  c/a  refers  to  the  ratio
+       between  the  short  and  long  axes.  Phi, theta and psi refer to the
+       Euler angles that describe the orientation of  the  density  distribu-
+       tion.
+
+
+</PRE>
+<H2>OPTIONS</H2><PRE>
+   <B>Particle</B>
+       The possible choices for <I>particle</I> are:
+
+              <B>all</B>
+                 Use the all the particles in box <I>box-number</I>
+
+              <B>dark</B>
+                 Use only the dark matter particles in box <I>box-number</I>
+
+              <B>gas</B>
+                 Use only the gas particles in box <I>box-number</I>
+
+              <B>star</B>
+                 Use only the star particles in box <I>box-number</I>
+
+   <B>Binning</B>
+       The possible choices for <I>binning</I> are:
+
+              <B>lin</B>
+                 Make  <I>bin-number</I> bins spaced equally in radius between <I>mini-</I>
+                 <I>mum-radius</I> and the size of box <I>box-number</I>
+
+              <B>log</B>
+                 Make <I>bin-number</I> bins spaced equally in  log  radius  between
+                 <I>minimum-radius</I> and the size of box <I>box-number</I>
+
+
+</PRE>
+<H2>SEE ALSO</H2><PRE>
+       <B><A HREF="profile.html">profile(1)</A></B>, <B><A HREF="rotationcurve.html">rotationcurve(1)</A></B>,
+
+
+</PRE>
+<H2>BUGS</H2><PRE>
+       The  technique doesn't always converge, particularily when the density
+       distribution is very clumpy.  Things converge much better when the box
+       <I>center-box-number</I>  contains  the true center for the density distribu-
+       tion in box <I>box-number</I> and is as small as possible.
+
+
+
+KQ Release 2.0                  22 MARCH 1994                      <B><A HREF="MOMENTS.html">MOMENTS(1)</A></B>
+</PRE>
+<HR>
+<ADDRESS>
+Man(1) output converted with
+<a href="http://www.oac.uci.edu/indiv/ehood/man2html.html">man2html</a>
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,53 @@
+NagBody: Installation steps details (tested for Yosemite in 2016-09-25)
+
+INSTALLING GRAVITATION SIMPLE CODES:
+
+1. Check that you have done what is in Installation_steps_OSX_00_requirements file.
+
+
+INSTALLING Other gravitational and md NAGBODY CODES::
+
+(We have assumed the packages files are in $HOME/Documents/zip).
+
+2. Unpack in $HOME nbody_tree.tar.gz
+cd $HOME
+tar xvf Documents/zip/nbody_tree.tar.gz
+cd NagBody_pkg
+make -f NagBody install_nbody_tree
+
+5. Unpack in $HOME md_blj_n2.tar.gz
+cd $HOME
+tar xvf Documents/zip/md_blj_n2.tar.gz
+cd NagBody_pkg
+make -f NagBody install_md_blj_n2
+
+6. Unpack in $HOME analysis_md.tar.gz
+cd $HOME
+tar xvf Documents/zip/analysis_md.tar.gz
+cd NagBody_pkg
+make -f NagBody install_analysis_md
+
+
+IF THERE WAS NOT PROBLEMS IN COMPILING THE CODES THEN TEST THEM ALL::
+
+NBODY_TREE:
+
+cd $HOME/borrame
+mkdir nbody_tree
+cd nbody_tree
+model nbody=1024 o=esfera1
+model nbody=1024 o=esfera2 vcmx=-1 cmx=5 cmy=5
+model in=esfera1,esfera2 o=esferas
+mkdir snaps
+nbody_tree ic=esferas tstop=100 o=snaps/snap%04d > output &
+analysis_grav in=snaps/snap%04d at=snap-anim fsnap=500 xr=-10:10 yr=-10:10
+
+
+MD:
+
+cd $HOME/borrame
+mkdir md
+cd md
+mkdir snaps
+md_blj_n2
+

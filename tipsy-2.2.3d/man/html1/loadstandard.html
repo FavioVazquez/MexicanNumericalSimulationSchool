@@ -1,0 +1,53 @@
+<HTML>
+<BODY>
+<PRE>
+<!-- Manpage converted by man2html 3.0.1 -->
+<B><A HREF="LOADBINARY.html">LOADBINARY(1)</A></B>                   TIPSY COMMANDS                  <B><A HREF="LOADBINARY.html">LOADBINARY(1)</A></B>
+
+
+
+
+</PRE>
+<H2>NAME</H2><PRE>
+       loadstandard  - load in data from a binary file in machine independent
+       format
+
+
+</PRE>
+<H2>SYNOPSIS</H2><PRE>
+       <B>loadstandard</B> <I>time</I> <I>[</I> <I>x-center</I> <I>y-center</I> <I>z-center</I>  <I>x-hwidth</I>  <I>y-hwidth</I>  <I>z-</I>
+       <I>hwidth</I> <I>]</I>
+
+
+</PRE>
+<H2>DESCRIPTION</H2><PRE>
+       <B>loadstandard</B>  loads  in  the data at time <I>time</I> from the currently open
+       binary file assuming it is in a machine independent format.   This  is
+       format  is  defined by the XDR (external data representation routines)
+       specified by RFC1014.  If more than one time is present in the  binary
+       file  the time closest to <I>time</I> is used.  It is typical (and useful) to
+       have many sequential time outputs in one  tipsy  binary  file.  If  no
+       binary file is open an error is generated.  Binary files can be opened
+       using the <B>openbinary</B> command.  Standard binary files  can  be  created
+       using  the  <B>totipstd</B>  program  from the tipsy_tools package.  The data
+       cannot be used until box 0 is loaded using either the <B>loadall</B> or  <B>set-</B>
+       <B>box</B>  command.  If the arguments <I>x-center</I> <I>y-center</I> <I>z-center</I> <I>x-hwidth</I> <I>y-</I>
+       <I>hwidth</I> <I>z-hwidth</I> are given, then a subbox centered at <I>x-center</I> <I>y-center</I>
+       <I>z-center</I> of half width <I>x-hwidth</I> <I>y-hwidth</I> <I>z-hwidth</I> is loaded.
+
+
+</PRE>
+<H2>SEE ALSO</H2><PRE>
+       <B><A HREF="loadall.html">loadall(1)</A></B>, <B><A HREF="openbinary.html">openbinary(1)</A></B>, <B><A HREF="loadbinary.html">loadbinary(1)</A></B>, <B><A HREF="readascii.html">readascii(1)</A></B>, <B><A HREF="setbox.html">setbox(1)</A></B>
+
+
+
+KQ Release 2.0                  22 MARCH 1994                   <B><A HREF="LOADBINARY.html">LOADBINARY(1)</A></B>
+</PRE>
+<HR>
+<ADDRESS>
+Man(1) output converted with
+<a href="http://www.oac.uci.edu/indiv/ehood/man2html.html">man2html</a>
+</ADDRESS>
+</BODY>
+</HTML>
