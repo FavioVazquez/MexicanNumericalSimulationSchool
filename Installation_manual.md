@@ -21,6 +21,8 @@ This instruction manual is to help install the required packages, libraries and 
 
 ### Installation instructions - Ubuntu
 
+Note that you must have Python installed in order to install and run yt
+
    1. Installing gcc/gfortran
       - Go to terminal
       - Type `sudo apt-get install gfortran gcc`
@@ -47,7 +49,7 @@ This instruction manual is to help install the required packages, libraries and 
    4. Install plplot library and gadgetviewer through NagBody
    
       -  Follow this [INSTALL](https://github.com/FavioVazquez/MexicanNumericalSimulationSchool/tree/master/preschool/Codes) file
-      - Follow the install file "Installation_steps_Linux-Ubuntu16"
+      - Follow the install file "[Installation_steps_Linux-Ubuntu16](https://github.com/FavioVazquez/MexicanNumericalSimulationSchool/blob/master/preschool/Codes/Installation_steps_Linux-Ubuntu16)"
       - Download the "zip" folder that contains all the programs that will be installe    
       - Follow the instructions in "Installation_steps...." 
       - Plplot and nbody kit should be installed.
