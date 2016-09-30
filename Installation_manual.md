@@ -2,20 +2,25 @@
 
 This instruction manual is to help install the required packages, libraries and programs needed to run N-body
    simulations ON A LINUX OPERATING SYSTEM COMPUTER, the following was all done on a computer with Ubuntu 14.04 LTS
+   
+# Table of Contents
+
+  * Installation for Preschool
+ 	* Ubuntu
+ 	* Mac
+  * Preschool Projects
+  * School
 
 # Installations for Preschool (sept 29 & 30)
 
-- The requirements are mentioned at the School's webpage: http://iac.edu.mx/mexsimschool/pre-school/reading-material/
  - gfortran and gcc compiler
  - python yt library:         http://yt-project.org/
  - tipsy:                      http://www-hpcc.astro.washington.edu/tools/tipsy/tipsy.html
- - python plplot library
+ - python plplot through Nbody
  - gadget viewer
+ - MPI
 
-### Previous requirements:
- - python
- - Maybe some python scientific libraries like scipy #correct me if i'm wrong. 
-  To install python just type 'sudo apt-get install python' on the terminal, check version with 'python --version'
+### Installation instructions - Ubuntu
 
    1. Installing gcc/gfortran
       - Go to terminal
@@ -41,7 +46,6 @@ This instruction manual is to help install the required packages, libraries and 
       - Now run a make to finish installation: 
       		`make`
       
-      
    4. Install plplot library and gadgetviewer through Nbody
    
       - refer to the instruction manual provided in the school's webpage:
@@ -63,7 +67,15 @@ This instruction manual is to help install the required packages, libraries and 
       - Move to the recently created directory: `cd openmpi-2.0.1`
       - Open the "INSTALL" document (which has detailed instructions on the installation) with the command `vi INSTALL`: "general build of OpenMPI is a combination of 'configure' and 'make' commands"
       - type `./configure`
-      - `make all inlstall`
+      - `make all install`
+      
+### Installation instructions - Mac
+
+
+
+      
+
+      
 
 
 # School (Oct 4,5,6 & 7)
