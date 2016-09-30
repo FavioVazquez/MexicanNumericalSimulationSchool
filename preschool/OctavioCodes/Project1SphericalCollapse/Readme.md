@@ -1,6 +1,6 @@
-COLD COLLAPSE
+# COLD COLLAPSE
 
-1.- Generate a homogeneous sphere with N particles
+- Generate a homogeneous sphere with N particles
 
 - Select a random number generator (tipically the generate homogeneous numbers
 between 0-1)
