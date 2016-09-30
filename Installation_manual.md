@@ -4,20 +4,20 @@ This instruction manual is to help install the required packages, libraries and 
    simulations ON A LINUX OPERATING SYSTEM COMPUTER, the following was all done on a computer with Ubuntu 14.04 LTS
 
 I. Preschool (sept 29 & 30)
-  The requirements are mentioned at the School's webpage: http://iac.edu.mx/mexsimschool/pre-school/reading-material/
-  
-- gfortran compiler
-- gcc compiler
-- python yt library          http://yt-project.org/
-- tipsy                      http://www-hpcc.astro.washington.edu/tools/tipsy/tipsy.html
-- python plplot library
-- gadget viewer
+
+- The requirements are mentioned at the School's webpage: http://iac.edu.mx/mexsimschool/pre-school/reading-material/
+ - gfortran compiler
+ - gcc compiler
+ - python yt library:         http://yt-project.org/
+ - tipsy:                      http://www-hpcc.astro.washington.edu/tools/tipsy/tipsy.html
+ - python plplot library
+ - gadget viewer
 
 Previous requirements:
 
 - python
-
-Maybe some python scientific libraries like scipy #correct me if i'm wrong. To install python just type 'sudo apt-get install python' on the terminal, check version with 'python --version'
+- Maybe some python scientific libraries like scipy #correct me if i'm wrong. 
+ To install python just type 'sudo apt-get install python' on the terminal, check version with 'python --version'
 
   1. To install gfortran gcc compiler:
       - go to terminal
@@ -30,8 +30,7 @@ Maybe some python scientific libraries like scipy #correct me if i'm wrong. To i
         is, but who cares! yt is installed
   3. To install tipsy:
       - download this tar ball ftp://ftp-hpcc.astro.washington.edu/pub/hpcc/tipsy.tar.gz
-      - Since tipsy will be installed on the folder you are located, my suggestion is to move the tar you just downloaded      into a /home subfolder (e.g. i did this by error inside the Dropbox folder and eventually it was hard for me to locate where
-       i'd installed the program)
+      - Since tipsy will be installed on the folder you are located, my suggestion is to move the tar you just downloaded             into a /home subfolder (e.g. i did this by error inside the Dropbox folder and eventually it was hard for me to    locate where i'd installed the program)
       - Once the tipsy.tar.gz is in the folder, extract all the files (just type 'tar xvf tipsy.tar.gz')
       - Move to the tipsy directory you just extracted with 'cd tipsy-2.2.3d'
       - Go to the code directory: 'cd code'
@@ -43,8 +42,7 @@ Maybe some python scientific libraries like scipy #correct me if i'm wrong. To i
       - you will find a link to a dropbox folder:
         https://www.dropbox.com/sh/wvh6vthsv13jia6/AAC3ZyOQNrHDgmdZgVwIM1O9a/Codes?dl=0 (check:active on sept 30)
       - Download the file: "Installation_steps_Linux-Ubuntu16"
-      - Download the "zip" folder that contains all the programs that will be installed
+      - Download the "zip" folder that contains all the programs that will be installe    
       - NOW JUST FOLLOW THE INSTRUCTIONS PROVIDED IN THE "Installation_steps...."
     #this will install plplot and nbodykit, I DONT KNOW IF GADGET VIEWER WAS INSTALLED WITH THIS STEPS, PLEASE CORRECT IF
      WRONG.
-  5.
