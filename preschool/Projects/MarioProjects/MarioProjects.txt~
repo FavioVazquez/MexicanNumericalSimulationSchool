@@ -1,0 +1,22 @@
+Projects by Mario R.
+Project 1:
+Modify the nbody_n2 code in order that the force is a Yukawa one, let us call it “nbody_n2_yukawa”. 
+Study the dynamics of the Plummer sphere under the standard Newtonian force versus Yukawa force. 
+Run this code and compare its results with the results the standard nbody_n2 gives:
+
+cd $HOME/borrame
+mkdir project1
+cd project1
+mkdir nbody_n2
+cd nbody_n2
+mkdir snaps
+nbody_n2 tstop=50 nbody=2048 o=snaps/snap%03d > output &
+
+cd $HOME/borrame/project1
+mkdir nbody_n2_yukawa
+cd nbody_n2_yukawa
+mkdir snaps
+nbody_n2_yukawa tstop=50 nbody=2048 o=snaps/snap%03d > output &
+
+cd $HOME/borrame/project1
+nplot2d in=nbody_n2/energy.txt,nbody_n2_yukawa/energy.txt uc=2:7,2:7

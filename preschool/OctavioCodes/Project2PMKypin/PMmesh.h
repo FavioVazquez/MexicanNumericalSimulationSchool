@@ -1,0 +1,6 @@
+      COMMON / GRID/	FI(NGRID,NGRID,NGRID)
+
+
+
+
+

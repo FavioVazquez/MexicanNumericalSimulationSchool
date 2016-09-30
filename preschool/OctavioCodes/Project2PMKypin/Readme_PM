@@ -1,0 +1,49 @@
+First, you should download the entire directory "PM_MSNS", otherwise you could have some errors when trying to compile, or run the codes.
+
+For generating initial conditions with this code, you need to:
+
+1) Compile, for that you need to do:
+	make PMmodels PMstartM
+
+
+2) Run the codes.
+	./PMmodels
+	   This program will ask you the following:
+		-> Name of a file where it writes parameters of the model and normalized power spectra.
+		-> σ8 = rms density perturbation in a sphere of radius 8h−1Mpc and the slope of the power spectrum at long
+		-> Line number in the file cdm.fit, this will be the cosmological model you will study, so you will need to look in this file and determine the line number of the model which you are interested in.
+		-> Size of the simulation box, number of particles in 1D, and the redshift at which you would like to start your code (or to get the power spectrum).
+		-> The program will ask you if you need to have a file with all input parameters needed to set initial conditions. If you need the file, answer “Yes” (I recomend this), and it will create file InStart.dat, which you will give as input to the second code PMstartM. It will also ask you few questions needed to produce the file. If you answer “No”, the code finishes its work by creating the file with the name you gave it in the first line.
+		-> If you answered “Yes” for the previous question, you will be asked to provide the following information:
+			*) A string of up to 45 characters (“header”). The header is not used for simulations, but it is useful to label your simulation. You can provide any information you want. This header will stick to your run. All files with snapshots of your simulation and all files with analysis of your simulation will have the header. Use the header to identify your run.
+			*) Step in the expansion parameter da. This defines how many integration steps the code will do untill it runs to the redshift zero. If you would like to make N steps and you start at redshift z, da = [ 1 − 1/(1+z) ] / N. 
+			*) Seed for random numbers (must be an integer number).
+
+       Next, you will run PMstartM which is the program that actually generates initial conditions for the PM code. It will generate two files (in binary format), which PMmain reads and updates: PMcrd.DAT (information on the cosmological model and parameters of the run) and PMcrs0.DAT (coordinates and velocities of particles). PMstartM will ask you to provide some parameters. If you created file InStart.dat using the program PMmodels, simply provide the file as input: ./PMstartM < InStart.dat
+
+
+Now, if you want to get the Power Spectrum of your initial conditions, you need to:
+
+1) Compile: make PMpowerM
+
+2) Run the code: ./PMpowerM
+	The power Spectrum will be in the file "Spectrum.DAT"
+
+
+And, if you want to get the coordinates and velocities in "real" units (i.e. not in units of the code) you can use PM_to_ASCIIm. This will convert the input files PMcrd.DAT and PMcrs0.DAT into readable output files. You will specify the output file name. For use this code, do:
+
+1) Compile: make PM_to_ASCIIm
+
+2) Run: ./PM_to_ASCIIm
+
+
+Note1: Also, you can use PM_to_ASCIIoTIPSY_ART.f instead of PM_to_ASCIIm, this is for visualize the data with tipsy.
+
+Note2: the parameters NROW and NGRID are in the file PMparametrs.h, and every time you change this, you should compile the programs.
+
+Note3: For further information about the ideas of the code you can consult Klypin et al. 1997 ( https://arxiv.org/abs/astro-ph/9712217 ), but you should take into account that the code we provide you is a more recent version of that code. So, if you have some troubles with runing the code, you can ask Octavio or Gabriela Aguilar.
+
+Note4: If you are interested in evolving the initial conditions, with the PM code, and you want to do it, please tell us, so we can give you the instructions.
+
+
+
