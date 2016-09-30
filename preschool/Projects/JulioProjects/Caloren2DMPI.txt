@@ -1,0 +1,5 @@
+1. Resolver la ecuación de calor en 2D paralelizando con MPI
+ - 1D: http://people.sc.fsu.edu/~jburkardt/c_src/heat_mpi/heat_mpi.html
+ - 2D: https://people.sc.fsu.edu/~jburkardt/c_src/heated_plate/heated_plate.html
+ 
+Este es el método explícito. El método implícito es por medio de la descomposición de dominio.
