@@ -16,7 +16,7 @@ This instruction manual is to help install the required packages, libraries and 
  - gfortran and gcc compiler
  - python yt library:         http://yt-project.org/
  - tipsy:                      http://www-hpcc.astro.washington.edu/tools/tipsy/tipsy.html
- - python plplot through Nbody
+ - python plplot through NagBody
  - gadget viewer
  - MPI
 
@@ -33,8 +33,7 @@ This instruction manual is to help install the required packages, libraries and 
    3. Installing tipsy:
       - `mkdir /home/tipsy`
       - `cd /home/tipsy`
-      - download this tar ball
-      		 ftp://ftp-hpcc.astro.washington.edu/pub/hpcc/tipsy.tar.gz
+      - `wget ftp://ftp-hpcc.astro.washington.edu/pub/hpcc/tipsy.tar.gz`
       - Extract all the files 
       		`tar xvf tipsy.tar.gz`
       - Move to the tipsy directory you just extracted with 
@@ -46,13 +45,11 @@ This instruction manual is to help install the required packages, libraries and 
       - Now run a make to finish installation: 
       		`make`
       
-   4. Install plplot library and gadgetviewer through Nbody
+   4. Install plplot library and gadgetviewer through NagBody
    
-      - refer to the instruction manual provided in the school's webpage:
-        http://iac.edu.mx/mexsimschool/pre-school/reading-material/
-      - you will find a link to a dropbox folder:
-        https://www.dropbox.com/sh/wvh6vthsv13jia6/AAC3ZyOQNrHDgmdZgVwIM1O9a/Codes?dl=0 (check:active on sept 30)
-      - Download the file: "Installation_steps_Linux-Ubuntu16"
+      -  Follow the INSTALL file at
+      	*https://github.com/FavioVazquez/MexicanNumericalSimulationSchool/tree/master/preschool/Codes
+      - Follow the install file "Installation_steps_Linux-Ubuntu16"
       - Download the "zip" folder that contains all the programs that will be installe    
       - Follow the instructions in "Installation_steps...." 
       - Plplot and nbody kit should be installed.
@@ -70,6 +67,11 @@ This instruction manual is to help install the required packages, libraries and 
       - `make all install`
       
 ### Installation instructions - Mac
+
+
+### Projects
+
+
 
 
 
