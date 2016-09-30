@@ -1,7 +1,7 @@
 MEXICAN NUMERICAL SIMULATIONS SCHOOL (Sept-Oct 2016), Instituto de Física, UNAM, Ciudad de México
 
 ###This instruction manual is to help install the required packages, libraries and programs needed to run N-body
-   simulations ON A LINUX OPERATING SYSTEM COMPUTER, the following was all done on a computer with Ubuntu 14.04 LTS###
+   simulations ON A LINUX OPERATING SYSTEM COMPUTER, the following was all done on a computer with Ubuntu 14.04 LTS
 
 I. Preschool (sept 29 & 30)
   The requirements are mentioned at the School's webpage: http://iac.edu.mx/mexsimschool/pre-school/reading-material/
