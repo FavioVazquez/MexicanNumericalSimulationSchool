@@ -1,6 +1,6 @@
 # Mexican Numerical Simulation School
 
-### The main website of the School is a thttp://iac.edu.mx/mexsimschool
+### The main website of the School is at http://iac.edu.mx/mexsimschool
 ### The webpage for this repository is at https://faviovazquez.github.io/MexicanNumericalSimulationSchool/
 ### You can join our live chat on Gitter by clicking the button below
 [![Join the chat at https://gitter.im/MexicanNumericalSimulationSchool/Lobby](https://badges.gitter.im/MexicanNumericalSimulationSchool/Lobby.svg)](https://gitter.im/MexicanNumericalSimulationSchool/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
