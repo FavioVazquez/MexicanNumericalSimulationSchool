@@ -1,5 +1,6 @@
 # Mexican Numerical Simulation School
 
+### The main website of the School is a thttp://iac.edu.mx/mexsimschool
 ### The webpage for this repository is at https://faviovazquez.github.io/MexicanNumericalSimulationSchool/
 ### You can join our live chat on Gitter by clicking the button below
 [![Join the chat at https://gitter.im/MexicanNumericalSimulationSchool/Lobby](https://badges.gitter.im/MexicanNumericalSimulationSchool/Lobby.svg)](https://gitter.im/MexicanNumericalSimulationSchool/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
@@ -19,5 +20,5 @@ This folder contains the following material:
 
 A general purpose Dropbox [for all MNSS preschool materials is available here](https://www.dropbox.com/sh/wvh6vthsv13jia6/AADpzJX2Sd5NYKBIcOtu4UKQa?dl=0)
  
-# MNSS School (4-7 Oct)
+# MNSS School (3-6 Oct)
  
