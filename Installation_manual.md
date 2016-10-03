@@ -13,10 +13,11 @@ This instruction manual is to help install the required packages, libraries and 
 # Installations for Preschool (sept 29 & 30)
 
  - gfortran and gcc compiler
- - python yt [library]( http://yt-project.org/):
+ - python [yt]( http://yt-project.org/) library:
  - [tipsy](http://www-hpcc.astro.washington.edu/tools/tipsy/tipsy.html)
- - 14 codes through NagBody
+ - 14 codes through NagBody 
  - MPI
+ - [Gadget Viewer](http://astro.dur.ac.uk/~jch/gadgetviewer/index.html)
 
 ### Installation instructions - Ubuntu
 
@@ -64,6 +65,16 @@ Note that you must have Python installed in order to install and run yt
       - Open the "INSTALL" document (which has detailed instructions on the installation) with the command `vi INSTALL`: "general build of OpenMPI is a combination of 'configure' and 'make' commands"
       - type `./configure`
       - type `make all install`, this should take a while.
+      
+   6. Gadget Viewer installation - [source](http://astro.dur.ac.uk/~jch/gadgetviewer/index.html)
+      - Download the tar ball from [website](http://astro.dur.ac.uk/~jch/gadgetviewer/index.html) or from our github [directory](https://github.com/FavioVazquez/MexicanNumericalSimulationSchool/blob/master/preschool/gadgetfileviewer/gadgetviewer-1.0.6.tar.gz).
+      - Move to /home and unpack with `tar xvf the_compressed_file_name`
+      - The [README](https://github.com/FavioVazquez/MexicanNumericalSimulationSchool/blob/master/preschool/gadgetfileviewer/README) file specifies that we must have C compiler and fortran90 compiler, tools that, by that point we must have installed if followed the guide. It also specifies that we must have GTK+ 2.0 GUI Library:
+      - Now, it seems from GTK+'s [webpage](http://www.gtk.org/download/linux.php) that we need MORE packages to even build GTK+, this packages are glib, gobject-introspection, pango, gdk-pixbuf and atk, you can find all these packages @ the above webpage (we recommend downloading the latest version of each)
+      - The same packages (versions from c. October 2016) are in [this]() link, download and unpack.
+      - Install in the following order: 
+         PENDING
+      
       
 ### Installation instructions - Mac
 
