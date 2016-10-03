@@ -72,8 +72,15 @@ Note that you must have Python installed in order to install and run yt
       - The [README](https://github.com/FavioVazquez/MexicanNumericalSimulationSchool/blob/master/preschool/gadgetfileviewer/README) file specifies that we must have C compiler and fortran90 compiler, tools that, by that point we must have installed if followed the guide. It also specifies that we must have GTK+ 2.0 GUI Library:
       - Now, it seems from GTK+'s [webpage](http://www.gtk.org/download/linux.php) that we need MORE packages to even build GTK+, this packages are glib, gobject-introspection, pango, gdk-pixbuf and atk, you can find all these packages @ the above webpage (we recommend downloading the latest version of each)
       - The same packages (versions from c. October 2016) are in [this]() link, download and unpack.
-      - Install in the following order: 
-         PENDING
+      - There is a dependency tree that prohibits you from installing Gadgetviewer from the start:
+         1. Gadgetviewer dependencies: GTK+2.0 GUI library, HDF5, libpng, PLplot
+         2. GTK+2.0 dependencies: GLib, GObject-instrospection, Pango, Gdk-Pixbuf, ATK
+         3. GLib dependencies: libpcre
+         
+      - We'll start by install HDF5, we downloaded the latest stable version from [here](https://launchpad.net/ubuntu/xenial/+source/hdf5),version 1.8.1, unpack and open the terminal, type  `./configure --prefix=/usr/local/hdf5` , after the configuration is done, run `make`, then `make check` (this might take a while), `make install` and finally `make check-install`
+      -Now, to install libpng google "libpng" or download from [here](https://sourceforge.net/projects/libpng/files/libpng16/1.6.25/libpng-1.6.25.tar.gz/download) version 1.6.25, it's again a combination of `./configure`, `make check` and `make install`
+      -PLplot was previously installed in step 4
+      -To install GTK+2.0 you need to install the dependencies in the next order: firstly, libpcre that can be downloaded from [here](https://sourceforge.net/projects/pcre/?source=typ_redirect), remember this is a dependency of glib. When installed, proceed to install GLib
       
       
 ### Installation instructions - Mac
