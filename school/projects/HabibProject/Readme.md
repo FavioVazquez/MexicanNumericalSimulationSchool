@@ -31,7 +31,7 @@ sudo apt-get install libgsl0-dev
 In 16.04 they have erased *libgsl0ldbl* so you will have to install the development version:
 
 ```
-apt-get install gsl-bin
+sudo apt-get install gsl-bin
 sudo apt-get install libgsl0-dev
 ```
 
