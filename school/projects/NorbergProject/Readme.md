@@ -1,4 +1,4 @@
-# Proposed Home Work
+# Peder Norberg Project
 
 A survey X provides you with a galaxy catalogue, accessible from 
 [here](http://www.astro.dur.ac.uk/~iprn/icc/teaching/MexicoSchool/survey_x.txt.gz). This catalogue 
