@@ -14,11 +14,13 @@ This folder contains the following material:
 
  - [Installation instructions and codes](https://github.com/FavioVazquez/MexicanNumericalSimulationSchool/blob/master/Installation_manual.md) used in sessions
  - Links to [youtube lectures](https://www.youtube.com/user/IFUNAM/videos)
- - [Reading Materials](https://github.com/FavioVazquez/MexicanNumericalSimulationSchool/blob/master/preschool/Bibliography.zip)
- - [Presentations given](https://github.com/FavioVazquez/MexicanNumericalSimulationSchool/tree/master/preschool/Presentations), by topics/speaker/day
- - [Projects specifications](https://github.com/FavioVazquez/MexicanNumericalSimulationSchool/tree/master/preschool/Projects)
+ - [Reading Material](https://github.com/FavioVazquez/MexicanNumericalSimulationSchool/blob/master/preschool/Bibliography.zip)
+ - [Lecture Slides](https://github.com/FavioVazquez/MexicanNumericalSimulationSchool/tree/master/preschool/Presentations), by topics/speaker/day
+ - [Preschool Projects](https://github.com/FavioVazquez/MexicanNumericalSimulationSchool/tree/master/preschool/Projects)
 
 A general purpose Dropbox [for all MNSS preschool materials is available here](https://www.dropbox.com/sh/wvh6vthsv13jia6/AADpzJX2Sd5NYKBIcOtu4UKQa?dl=0)
  
 # MNSS School (3-6 Oct)
+
+ - [School Projects](https://github.com/FavioVazquez/MexicanNumericalSimulationSchool/tree/master/school/projects)
  
