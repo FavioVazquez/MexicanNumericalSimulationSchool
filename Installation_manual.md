@@ -46,11 +46,11 @@ Note that you must have Python installed in order to install and run yt
       - Now run a make to finish installation: 
       		`make`
       
-   4. Install the 14 codes necessary through NagBody -- [available here](http://iac.edu.mx/mexsimschool/pre-school/precourses/)
+   4. Install the 14 codes necessary through NagBody -- [available here](https://www.dropbox.com/sh/wvh6vthsv13jia6/AAC3ZyOQNrHDgmdZgVwIM1O9a/Codes?dl=0)
    
-      -  Follow this [INSTALL](https://github.com/FavioVazquez/MexicanNumericalSimulationSchool/tree/master/preschool/Codes) file
-      - Follow the install file [Installation_steps_Linux-Ubuntu16](https://github.com/FavioVazquez/MexicanNumericalSimulationSchool/blob/master/preschool/Codes/Installation_steps_Linux-Ubuntu16)
-      - Download the [zip](https://github.com/FavioVazquez/MexicanNumericalSimulationSchool/tree/master/preschool/MarioNBodyCodes/zip) folder that contains all the programs that will be installe    
+      -  Follow this [INSTALL](https://github.com/FavioVazquez/MexicanNumericalSimulationSchool/blob/master/preschool/MarioNagBodyCodes/INSTALL) file
+      - Follow the install file [Installation_steps_Linux-Ubuntu16](https://github.com/FavioVazquez/MexicanNumericalSimulationSchool/blob/master/preschool/MarioNagBodyCodes/Installation_steps_Linux-Ubuntu16)
+      - Download the [tar packages](https://github.com/FavioVazquez/MexicanNumericalSimulationSchool/tree/master/preschool/MarioNagBodyCodes/zip)  i.e. all the programs that will be installed.
       - Follow the instructions in "Installation_steps...." 
       - Plplot and nbody kit should be installed.
 
