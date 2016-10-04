@@ -6,6 +6,8 @@
 
 3. Use the power spectrum emulator and the galaxy power spectrum to measure galaxy bias as the HOD parameters are changed. Make sure you match the cosmologies in the two emulators before you do this.
 
+**Note**: A galaxy bias is given by the ratio of the galaxy power spectrum to the matter power spectrum (this equals the bias squared). The bias is a function of the wavenumber k, and should tend to a constant value at low k (i.e., become independent of k).
+
 # Instructions to install the emulator
 
 Visit this webpage http://www.hep.anl.gov/cosmology/CosmicEmu/emu.html. Get familiarized with the page and read the overview. 
