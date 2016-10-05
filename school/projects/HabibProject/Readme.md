@@ -23,7 +23,7 @@ The library provides a wide range of mathematical routines such as random number
 To install this library in ubuntu 14.04 run:
 
 ```
-apt-get install gsl-bin
+sudo apt-get install gsl-bin
 sudo apt-get install libgsl0ldbl
 sudo apt-get install libgsl0-dev
 ```
@@ -31,7 +31,7 @@ sudo apt-get install libgsl0-dev
 In 16.04 they have erased *libgsl0ldbl* so you will have to install the development version:
 
 ```
-apt-get install gsl-bin
+sudo apt-get install gsl-bin
 sudo apt-get install libgsl0-dev
 ```
 

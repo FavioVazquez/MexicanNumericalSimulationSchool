@@ -56,7 +56,7 @@ c--------------------------------------------------------------------
       INCLUDE 'nbody1.h'
 
       close(1)
-      Open(1,file='particlesA.dat',status='unknow', action='write')
+      Open(1,file='particlesA.dat',status='unknown', action='write')
       Open(30,file='DATA/particlesA.dat')
 
          write(1,*)'',
