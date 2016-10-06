@@ -56,12 +56,12 @@ main(int argc, char **argv) {
 	    xstar[6]=0;
             break;
         case 3:
-	    xstar[0]=0.0222;
-	    xstar[1]=0.1509;
-	    xstar[2]=0.968;
-	    xstar[3]=67.8;
+	    xstar[0]=0.02227;
+	    xstar[1]=0.1413;
+	    xstar[2]=0.9681;
+	    xstar[3]=67.9;
 	    xstar[4]=-1;
-	    xstar[5]=0.8150;
+	    xstar[5]=0.8154;
 	    xstar[6]=0;
             break;
         default:
