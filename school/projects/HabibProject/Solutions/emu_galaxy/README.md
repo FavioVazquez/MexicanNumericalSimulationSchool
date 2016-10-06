@@ -1,14 +1,17 @@
-Thank you for using our HOD P(k) emulator. Please see our paper on the
-arxiv for further details. If you do use our emulator, please cite our
-paper. Please send questions to jkwan@anl.gov.
+To begin, you will need a version of GSL installed. If you have used the last emulators you already have it installed.
 
-To begin, you will need a version of GSL installed, which you can
-download from here: http://www.gnu.org/software/gsl/. I have version
-1.15, but any version that includes the gsl_matrix and gsl_spline
-functions will do.
+Check the Makefile to see if the GSL directory is the one defined by GSL_DIR. You 
+can see where is GSL installed with:
 
-To make the executable, type: 
-gcc -o emu.out -I/users/astro/jkwan/libs/gsl/include -L/users/astro/jkwan/libs/gsl/lib -lgsl -lgslcblas -lm -g emu.c main.c
+```
+locate gsl
+```
+
+After you have configured your Makefile, to compile the code just type:
+
+```
+make
+```
 
 The entire emulation process is contained in emu.c and main.c is just
 a driver that opens the parameter file, checks that the HOD parameters
@@ -26,7 +29,10 @@ The k bins are defined in logk.h. The code assumes that the ordering
 of parameters in *cosmoparams is the same as in the params.ini file.
 
 To run the emulator, type: 
+
+```
 emu.out params.ini output.txt
+```
 
 params.ini contains the HOD parameters, in the following
 order:
@@ -38,13 +44,6 @@ kappa
 alpha
 z
 
-
-Please write only one parameter per line. You can comment out a line
-by prefacing it with the '#' character. The resultant 2-pt function
-will be contained in output.txt. There will also be a short header
-reminding you of your input parameters. 
-
-
 The parameter ranges are:
 12.85 < Mcut < 13.85  Msun
 13.3 < M1 < 14.3      Msun
@@ -52,7 +51,4 @@ The parameter ranges are:
 0.5 < kappa < 1.5
 1.5 < alpha < 1.5
 0 < z < 1
-
-If you get it wrong, the code will helpfully remind you of the
-parameter ranges again.
 
