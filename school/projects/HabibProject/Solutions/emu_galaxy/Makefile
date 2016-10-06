@@ -1,0 +1,6 @@
+GSL_DIR=/usr
+
+emu.out: emu.c main.c pade.c pk_to_xi.c
+	gcc -o emu.out -I$(GSL_DIR)/include -L$(GSL_DIR)/lib main.c emu.c pade.c pk_to_xi.c -lgsl -lgslcblas -lm -g 
+
+
