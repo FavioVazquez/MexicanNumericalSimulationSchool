@@ -1,6 +1,6 @@
 To begin, you will need a version of GSL installed. If you have used the last emulators you already have it installed.
 
-Check the Makefile to see if the GSL directory is the one defined by GSL_DIR. You 
+Check the Makefile to see if the GSL directory is the one defined by GSL_DIR. There is an example in Makefile~. You 
 can see where is GSL installed with:
 
 ```
@@ -37,18 +37,19 @@ emu.out params.ini output.txt
 params.ini contains the HOD parameters, in the following
 order:
 
-log10(Mcut)  
-log10(M1)
-sigma
-kappa
-alpha
-z
+- log10(Mcut)
+- log10(M1)
+- sigma
+- kappa
+- alpha
+- z
 
 The parameter ranges are:
-12.85 < Mcut < 13.85  Msun
-13.3 < M1 < 14.3      Msun
-0.5 < sigma < 1.2
-0.5 < kappa < 1.5
-1.5 < alpha < 1.5
-0 < z < 1
+
+- 12.85 < Mcut < 13.85  Msun
+- 13.3 < M1 < 14.3      Msun
+- 0.5 < sigma < 1.2
+- 0.5 < kappa < 1.5
+- 1.5 < alpha < 1.5
+- 0 < z < 1
 
