@@ -11,6 +11,12 @@
  *  reproduced on all copies.  Neither the U.S. Government nor LANS makes any warranty, express or implied, 
  *  or assumes any liability or responsibility for the use of this software.
  *
+ *
+ *  Modified by Irvin Martínez and Favio Vazquez on 10/07/2016
+ *  
+ *  This program was modified during the Mexican Numerical Simulation Schools on Salman Habib (LANL) project. 
+ *
+ *
  */
  
  
