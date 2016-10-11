@@ -8,9 +8,8 @@ This instruction manual is to help install the required packages, libraries and 
   * Installation for Preschool
  	* Ubuntu
  	* Mac
-  * School
 
-# Installations for Preschool (sept 29 & 30)
+# Installations
 
  - gfortran and gcc compiler
  - python [yt]( http://yt-project.org/) library:
@@ -85,14 +84,65 @@ Note that you must have Python installed in order to install and run yt
       
 ### Installation instructions - Mac
 
+First step is install Xcode, you can download it from App Store.
+Then you have to install de command line tools by typing in the terminal 
 
+```
+xcode-select --install
+```
 
+The command line tools contain a gcc compiler and at this point you should have already installed python by default in OS X.
 
+In order to install gfortran, you can download it and install it  from 
+https://gcc.gnu.org/wiki/GFortranBinaries#MacOS
 
-      
+You must get quartz from
+https://www.xquartz.org
+Download it and install 
 
-      
+**NOTE**: There are several options to install the libraries and programs, the most common and recommended are Homebrew and Mac Ports, the major difference between them is the path that use to install, and even if you use both, you should not have problems with compatibility because they install in different directories. 
 
+The instructions provided by Mario, are thought to install everything using MacPorts, and I recommend to follow in that way, but if you decide to use homebrew, I will give you the instructions below , but the plplot version that Mario's codes requiere is easily installed using MacPorts, (using homebrew I was not able to solve the errors that).
 
-# School (Oct 4,5,6 & 7)
- TBA
+Note: At some point the Mario's instrucctions ask you to change you profile the name of that file can be .profile or .bash_profile
+
+- USING HOMEBREW :
+
+Install home-brew typing in terminal
+
+```
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
+
+You will get Open-MPI by typing in the terminal
+
+```
+brew install open-mpi
+```
+
+In case you prefer use Mpich type
+
+```
+brew install mpich
+```
+
+**Note**: be careful never install open-mpi and mpich, you have to choose only one.
+
+This version works perfectly with the Cosmic Emulator that Salman Habib provide us. 
+
+- Install GSL
+
+```
+brew install gsl
+```
+- Install gnuplot
+
+```
+brew install gnuplot
+```
+
+- Install Plplot
+
+```
+brew install plplot
+```    
